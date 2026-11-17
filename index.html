@@ -1,0 +1,571 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Allanah Writing Portfolio</title>
+<meta name="description" content="Allanah is a content writer: articles, blog posts, website copy, social content and video scripts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@400;500;600;700&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Gochi+Hand&display=swap">
+<meta property="og:title" content="Allanah, content writer">
+<meta property="og:description" content="Articles, blog posts, website copy, social content and video scripts.">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<style>
+/* Layout: a writer's desk. Scattered script scraps in the hero tidy themselves into a row as you scroll,
+   then the page reads like a filing system: index card, folder tabs, drawer cabinet, stamps, envelope. */
+:root{
+  --desk:#FAF9F5;      /* page ground */
+  --desk-2:#F1EFE8;    /* footer / recessed */
+  --ink:#1F1E1B;
+  --ink-2:#6E6A62;
+  --rule:#E3E0D7;
+  --dot:#D9D5CA;
+  --paper:#FFFEFA;
+  --red:#C2412D;       /* red pen, censor marks */
+  --hl:#F4DB6A;        /* highlighter */
+  --hl-ink:#3A3000;
+  --blue:#3559B0;
+  --blue-ink:#FFFFFF;
+  --sage:#B9CDB0;
+  --manila:#EAD7A8;
+  --manila-2:#DCC48C;
+  --pink:#EFC6D3;
+  --clay:#B87355;
+  --shadow:0 1px 0 rgba(40,30,10,.06),0 6px 18px -8px rgba(40,30,10,.28);
+  --f-display:"Familjen Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Familjen Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --f-script:"Courier Prime","Courier New",Courier,monospace;
+  --f-hand:"Gochi Hand","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --desk:#1A1917;--desk-2:#141311;--ink:#EDEAE2;--ink-2:#A39E93;--rule:#2F2D29;--dot:#34312C;--paper:#26241F;
+  --red:#E56A54;--hl:#C9AE3C;--hl-ink:#1A1600;--blue:#5C7FD6;--blue-ink:#0E1426;--sage:#6F8667;--manila:#8E7A4D;--manila-2:#76643C;--pink:#9C6A7B;--clay:#A4664B;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 8px 20px -8px rgba(0,0,0,.7);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --desk:#1A1917;--desk-2:#141311;--ink:#EDEAE2;--ink-2:#A39E93;--rule:#2F2D29;--dot:#34312C;--paper:#26241F;
+  --red:#E56A54;--hl:#C9AE3C;--hl-ink:#1A1600;--blue:#5C7FD6;--blue-ink:#0E1426;--sage:#6F8667;--manila:#8E7A4D;--manila-2:#76643C;--pink:#9C6A7B;--clay:#A4664B;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 8px 20px -8px rgba(0,0,0,.7);color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--desk-2);color:var(--ink);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:4px}
+.sheet{background:var(--desk);background-image:radial-gradient(var(--dot) 1.1px,transparent 1.2px);background-size:22px 22px;border-radius:0 0 28px 28px;position:relative;z-index:1;box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:-.01em}
+.eyebrow{font:700 12px/1 var(--f-script);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.ph{background:linear-gradient(transparent 12%,var(--hl) 12%,var(--hl) 88%,transparent 88%);color:var(--hl-ink);padding:0 .15em;border-radius:2px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px;position:relative;z-index:5}
+.mark{font:700 18px/1 var(--f-display);text-decoration:none;display:flex;align-items:center;gap:10px}
+.mark i{width:12px;height:12px;border-radius:50%;background:var(--red);display:inline-block}
+.top nav{display:flex;gap:4px;flex-wrap:wrap}
+.top nav a{font:500 14px/1 var(--f-body);text-decoration:none;padding:8px 12px;border-radius:999px;color:var(--ink-2)}
+.top nav a:hover{background:var(--paper);color:var(--ink);box-shadow:var(--shadow)}
+.note-ph{font:400 15px/1.3 var(--f-hand);background:var(--hl);color:var(--hl-ink);padding:8px 12px;transform:rotate(-1.5deg);box-shadow:var(--shadow);max-width:280px}
+
+.wip{display:flex;flex-direction:column;gap:3px;background:var(--paper);box-shadow:var(--shadow);padding:9px 14px 10px;transform:rotate(1.5deg);position:relative;border-left:4px solid var(--red)}.wip::before{content:"";position:absolute;top:-9px;left:50%;width:56px;height:18px;margin-left:-28px;background:color-mix(in srgb,var(--hl) 70%,transparent);transform:rotate(-4deg)}.wip b{font:700 11px/1 var(--f-script);letter-spacing:.16em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:7px}.wip b::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red);animation:blink 1.6s ease-in-out infinite}.wip span{font:400 16px/1.1 var(--f-hand);color:var(--ink-2)}@keyframes blink{50%{opacity:.25}}@media (prefers-reduced-motion:reduce){.wip b::before{animation:none}}@media (max-width:640px){.top nav{display:none}.wip{padding:7px 10px}.wip span{display:none}}
+/* hero */
+.hero{position:relative;height:clamp(620px,92vh,860px);overflow:hidden}
+.hero-copy{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);text-align:center;width:min(640px,92%);z-index:3}
+.hero h1{font:700 clamp(44px,8vw,92px)/.95 var(--f-display);letter-spacing:-.035em}
+.hero h1 .dot{color:var(--red)}
+.hero p{margin:18px auto 0;max-width:30ch;font-size:clamp(17px,2.2vw,21px);color:var(--ink-2)}
+.hero p strong{color:var(--ink);font-weight:600}
+.hero .cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.btn{font:600 15px/1 var(--f-body);text-decoration:none;padding:13px 18px;border-radius:999px;border:1.5px solid var(--ink);background:var(--ink);color:var(--desk);display:inline-flex;gap:8px;align-items:center;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{transform:translateY(-1px)}
+.scroll-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);font:400 16px/1 var(--f-hand);color:var(--ink-2);z-index:3}
+
+.hero .bit{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%) rotate(var(--r));z-index:2;will-change:transform;transition:box-shadow .2s}
+.hero .bit:hover{z-index:4}
+.card{background:var(--paper);box-shadow:var(--shadow);border-radius:3px}
+.idx{width:220px;padding:12px 14px 14px;font:400 13px/1.45 var(--f-script);background:var(--paper);background-image:linear-gradient(var(--paper) 30px,transparent 30px),repeating-linear-gradient(transparent 0 19px,color-mix(in srgb,var(--blue) 25%,transparent) 19px 20px);border-top:2px solid color-mix(in srgb,var(--red) 60%,transparent)}
+.idx b{display:block;font-weight:700;letter-spacing:.06em;margin-bottom:6px}
+.ticket{white-space:nowrap;background:var(--blue);color:var(--blue-ink);font:700 15px/1 var(--f-script);padding:12px 16px;border-radius:4px;box-shadow:var(--shadow);-webkit-mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle 6px at 0 50%,transparent 98%,#000) left/51% 100% no-repeat,radial-gradient(circle 6px at 100% 50%,transparent 98%,#000) right/51% 100% no-repeat}
+.ticket small{display:block;font:400 10px/1 var(--f-script);letter-spacing:.14em;opacity:.8;margin-bottom:6px}
+.sticky{background:var(--hl);color:var(--hl-ink);font:400 18px/1.15 var(--f-hand);width:150px;padding:16px 14px 20px;box-shadow:var(--shadow)}
+.stamp{width:112px;height:112px;border-radius:50%;border:3px double var(--red);color:var(--red);display:grid;place-items:center;text-align:center;font:700 13px/1.1 var(--f-script);letter-spacing:.1em;text-transform:uppercase;opacity:.9;background:color-mix(in srgb,var(--red) 6%,transparent)}
+.pill{white-space:nowrap;background:var(--pink);color:var(--ink);font:700 14px/1 var(--f-script);padding:10px 14px;border-radius:999px;box-shadow:var(--shadow)}
+.receipt{width:170px;background:var(--paper);font:400 12px/1.5 var(--f-script);padding:12px 14px 18px;box-shadow:var(--shadow);-webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 8px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/12px 8px repeat-x;mask:linear-gradient(#000 0 0) top/100% calc(100% - 8px) no-repeat,conic-gradient(from -45deg at bottom,#0000,#000 1deg 89deg,#0000 90deg) bottom/12px 8px repeat-x}
+.receipt hr{border:0;border-top:1px dashed var(--ink-2);margin:6px 0}
+.receipt .row{display:flex;justify-content:space-between}
+.tabcard{background:var(--manila);color:var(--ink);font:700 15px/1 var(--f-display);padding:14px 18px 16px;border-radius:2px 8px 4px 4px;box-shadow:var(--shadow);position:relative;margin-top:14px}
+.tabcard::before{content:"";position:absolute;left:0;top:-14px;width:58%;height:15px;background:var(--manila);border-radius:6px 10px 0 0}
+.tag{white-space:nowrap;background:var(--sage);color:var(--ink);font:400 14px/1 var(--f-script);padding:12px 16px 12px 26px;border-radius:4px 14px 14px 4px;box-shadow:var(--shadow);position:relative}
+.tag::before{content:"";position:absolute;left:9px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--desk);box-shadow:inset 0 0 0 1.5px rgba(0,0,0,.2)}
+.label{background:var(--ink);color:var(--desk);font:700 12px/1 var(--f-script);letter-spacing:.16em;padding:9px 12px;border-radius:2px;box-shadow:var(--shadow)}
+.clipnote{background:var(--paper);width:150px;padding:18px 14px 14px;font:400 13px/1.35 var(--f-script);box-shadow:var(--shadow);position:relative}
+.clipnote::before{content:"";position:absolute;top:-10px;left:20px;width:12px;height:30px;border:2px solid var(--ink-2);border-radius:8px;background:transparent}
+.clipnote .r{color:var(--red);font-weight:700}
+.edit{background:var(--paper);font:400 15px/1.3 var(--f-script);padding:12px 14px;box-shadow:var(--shadow)}
+.edit s{color:var(--red);text-decoration-thickness:2px}
+.edit ins{text-decoration:none;font:400 18px/1 var(--f-hand);color:var(--red);vertical-align:4px;margin-left:2px}
+.chip{background:var(--clay);color:#FFF8F2;font:700 13px/1 var(--f-script);letter-spacing:.08em;padding:11px 14px;border-radius:3px;box-shadow:var(--shadow)}
+
+/* sections */
+section.block{padding-block:clamp(64px,10vw,120px)}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:36px;max-width:640px}
+.sec-head h2{font:700 clamp(30px,4.4vw,46px)/1.05 var(--f-display);letter-spacing:-.025em}
+.sec-head p{margin:0;color:var(--ink-2)}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.9fr);gap:40px;align-items:start}
+.about-card{background:var(--paper);box-shadow:var(--shadow);padding:34px clamp(20px,4vw,44px) 38px;position:relative;transform:rotate(-.6deg);background-image:linear-gradient(var(--paper) 64px,transparent 64px),repeating-linear-gradient(transparent 0 31px,color-mix(in srgb,var(--blue) 18%,transparent) 31px 32px);background-position:0 0,0 6px}
+.about-card::after{content:"";position:absolute;top:0;bottom:0;left:clamp(10px,2.2vw,26px);border-left:1.5px solid color-mix(in srgb,var(--red) 45%,transparent)}
+.about-card h2{font:700 clamp(28px,3.6vw,38px)/1.1 var(--f-display);margin-bottom:14px;letter-spacing:-.02em}
+.about-card p{margin:0 0 0;line-height:32px;max-width:60ch}
+.about-card p+p{margin-top:0}
+.staple{position:absolute;top:-6px;width:34px;height:7px;border:2px solid var(--ink-2);border-bottom:0;border-radius:2px 2px 0 0}
+.facts{display:grid;gap:14px}
+.fact{background:var(--paper);box-shadow:var(--shadow);padding:16px 18px;display:grid;gap:4px;border-radius:3px}
+.fact .k{font:700 11px/1 var(--f-script);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.fact .v{font:600 18px/1.3 var(--f-display)}
+.fact.hand{background:var(--hl);color:var(--hl-ink);transform:rotate(1.2deg)}
+.fact.hand .v{font:400 22px/1.2 var(--f-hand)}
+.fact.hand .k{color:var(--hl-ink);opacity:.7}
+
+/* work: folder tabs + table */
+.folder{position:relative}
+.tabs{display:flex;gap:0;padding-left:8px;overflow-x:auto;scrollbar-width:none}
+.tabs button{font:600 14px/1.15 var(--f-body);text-align:left;color:var(--ink-2);background:var(--manila-2);border:0;padding:12px 34px 12px 18px;margin-right:-14px;clip-path:polygon(0 0,calc(100% - 22px) 0,100% 100%,0 100%);border-radius:8px 0 0 0;cursor:pointer;white-space:nowrap;position:relative}
+.tabs button small{display:block;font:400 11px/1 var(--f-script);letter-spacing:.06em;margin-top:4px;opacity:.85}
+.tabs button[aria-selected="true"]{background:var(--manila);color:var(--ink);z-index:2}
+.tabs button:not([aria-selected="true"]){filter:saturate(.7)}
+.panel-wrap{background:var(--manila);border-radius:0 12px 12px 12px;padding:clamp(12px,2.4vw,24px);box-shadow:var(--shadow)}
+.panel{background:var(--paper);border-radius:6px;padding:clamp(14px,2.6vw,26px);background-image:linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);background-size:20px 20px;background-position:-1px -1px}
+.panel-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.panel-top p{margin:0;max-width:60ch;background:var(--paper);font-size:15px;color:var(--ink-2)}
+.count{font:400 12px/1 var(--f-script);background:var(--paper);border:1px solid var(--rule);padding:6px 10px;border-radius:999px}
+.tbl-scroll{overflow-x:auto;position:relative}
+table{width:100%;border-collapse:separate;border-spacing:0 6px;font-size:15px;min-width:680px}
+th{font:700 11px/1 var(--f-script);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);text-align:left;padding:4px 14px 8px;background:transparent}
+td{background:var(--paper);padding:13px 14px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);vertical-align:middle}
+td:first-child{border-left:1px solid var(--rule);border-radius:6px 0 0 6px}
+td:last-child{border-right:1px solid var(--rule);border-radius:0 6px 6px 0}
+td.t{font-weight:600}
+td.num{font:400 14px/1 var(--f-script);font-variant-numeric:tabular-nums;white-space:nowrap}
+.role{font:700 11px/1 var(--f-script);letter-spacing:.1em;text-transform:uppercase;padding:6px 9px;border-radius:999px;white-space:nowrap;display:inline-block}
+.role.w{background:color-mix(in srgb,var(--blue) 16%,transparent);color:var(--blue)}
+.role.r{background:color-mix(in srgb,var(--red) 14%,transparent);color:var(--red)}
+.role.f{background:color-mix(in srgb,var(--sage) 50%,transparent);color:var(--ink)}
+.go{font:600 14px/1 var(--f-body);text-decoration:none;border:1px solid var(--rule);background:var(--desk);padding:7px 12px;border-radius:999px;white-space:nowrap}
+.go:hover{border-color:var(--ink)}
+
+/* services: drawer cabinet */
+.cabinet{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1.5px solid var(--ink-2);background:var(--paper);border-radius:4px;box-shadow:var(--shadow)}
+.drawer{border-right:1.5px solid var(--ink-2);border-bottom:1.5px solid var(--ink-2);padding:22px 22px 26px;display:grid;justify-items:center;text-align:center;gap:12px;position:relative;transition:background .2s}
+.drawer:nth-child(3n){border-right:0}
+.drawer:nth-last-child(-n+3){border-bottom:0}
+.drawer:hover{background:color-mix(in srgb,var(--manila) 22%,var(--paper))}
+.holder{border:1.5px solid var(--ink-2);border-radius:999px;padding:4px 6px}
+.holder span{display:block;font:400 19px/1 var(--f-hand);padding:6px 16px;border-radius:999px;background:var(--c,var(--pink));color:var(--ink);min-width:140px}
+.pull{width:30px;height:30px;border-radius:50%;border:1.5px solid var(--ink-2);margin:2px 0 4px;position:relative}
+.pull::after{content:"";position:absolute;inset:8px;border-radius:50%;border:1.5px solid var(--rule)}
+.drawer p{margin:0;font-size:15px;line-height:1.5;color:var(--ink-2);max-width:32ch}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;counter-reset:s}
+.steps li{background:var(--paper);box-shadow:var(--shadow);padding:16px 14px 18px;border-radius:3px;position:relative;display:grid;gap:6px;align-content:start}
+.steps li:nth-child(odd){transform:rotate(-1deg)}
+.steps li:nth-child(even){transform:rotate(1deg) translateY(10px)}
+.steps .n{font:700 12px/1 var(--f-script);color:var(--red);letter-spacing:.1em}
+.steps h3{font:700 17px/1.15 var(--f-display)}
+.steps p{margin:0;font-size:14px;line-height:1.45;color:var(--ink-2)}
+
+/* testimonials: stamps */
+.stamps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.stampcard{--perf:var(--desk);background:var(--paper);padding:14px;position:relative;filter:drop-shadow(0 6px 10px rgba(40,30,10,.18));
+  -webkit-mask:radial-gradient(circle 6px,#0000 97%,#000) -9px -9px/18px 18px round;mask:radial-gradient(circle 6px,#0000 97%,#000) -9px -9px/18px 18px round}
+.stampcard:nth-child(1){transform:rotate(-2deg)}
+.stampcard:nth-child(2){transform:rotate(1.5deg) translateY(16px)}
+.stampcard:nth-child(3){transform:rotate(-.8deg)}
+.stamp-in{background:var(--c);padding:22px 20px 18px;height:100%;display:grid;gap:14px;align-content:space-between}
+.stamp-in blockquote{margin:0;font:500 17px/1.45 var(--f-body);color:var(--ink)}
+.stamp-in cite{font:700 12px/1.3 var(--f-script);font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.stamp-in .val{font:700 13px/1 var(--f-script);color:var(--ink);opacity:.7;text-align:right}
+
+/* contact: envelope */
+.envelope{background:var(--paper);box-shadow:var(--shadow);border-radius:6px;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);overflow:hidden;position:relative;border-top:10px solid transparent;border-image:repeating-linear-gradient(-45deg,var(--red) 0 14px,var(--paper) 14px 22px,var(--blue) 22px 36px,var(--paper) 36px 44px) 10}
+.env-l{padding:clamp(24px,4vw,48px)}
+.env-l h2{font:700 clamp(32px,5vw,56px)/1 var(--f-display);letter-spacing:-.03em;margin:10px 0 14px}
+.env-l p{margin:0 0 22px;color:var(--ink-2);max-width:42ch}
+.addr{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.addr code{font:700 16px/1 var(--f-script);background:var(--desk);border:1px dashed var(--ink-2);padding:13px 14px;border-radius:4px;user-select:all;overflow-wrap:anywhere}
+.env-r{padding:clamp(24px,4vw,48px);border-left:1px dashed var(--rule);display:grid;align-content:space-between;gap:24px;position:relative}
+.postmark{position:absolute;top:24px;right:24px;width:96px;height:96px;border-radius:50%;border:2px solid var(--ink-2);display:grid;place-items:center;text-align:center;font:700 10px/1.3 var(--f-script);color:var(--ink-2);letter-spacing:.1em;transform:rotate(12deg);opacity:.75}
+.links{list-style:none;margin:0;padding:0;display:grid;gap:4px;margin-top:110px}
+.links a{display:flex;justify-content:space-between;gap:12px;text-decoration:none;font:600 18px/1 var(--f-display);padding:14px 0;border-bottom:1px solid var(--rule)}
+.links a span:last-child{font:400 13px/1 var(--f-script);color:var(--ink-2)}
+.links a:hover span:first-child{text-decoration:underline;text-decoration-color:var(--red);text-underline-offset:4px}
+.copied{font:400 16px/1 var(--f-hand);color:var(--red);min-height:1em}
+
+/* footer */
+footer{padding-top:56px;overflow:hidden}
+.foot-cols{display:flex;gap:40px;flex-wrap:wrap;font-size:14px;color:var(--ink-2)}
+.foot-cols div{display:grid;gap:6px;align-content:start;padding-left:16px;border-left:1px solid var(--rule)}
+.foot-cols b{font:700 11px/1 var(--f-script);letter-spacing:.12em;text-transform:uppercase}
+.foot-cols a{text-decoration:none;color:var(--ink)}
+.wordmark{font:700 clamp(96px,27vw,360px)/.78 var(--f-display);letter-spacing:-.06em;color:var(--rule);text-align:center;margin-top:40px;user-select:none;white-space:nowrap;transform:translateY(8%)}
+
+@media (max-width:900px){
+  .about{grid-template-columns:1fr}
+  .steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .cabinet{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .drawer:nth-child(3n){border-right:1.5px solid var(--ink-2)}
+  .drawer:nth-child(2n){border-right:0}
+  .drawer:nth-last-child(-n+3){border-bottom:1.5px solid var(--ink-2)}
+  .drawer:nth-last-child(-n+2){border-bottom:0}
+  .stamps{grid-template-columns:1fr;max-width:460px}
+  .stampcard:nth-child(2){transform:rotate(1.5deg)}
+  .envelope{grid-template-columns:1fr}
+  .env-r{border-left:0;border-top:1px dashed var(--rule)}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .top nav{display:none}
+  .hero{height:820px}
+  .hero-copy{top:50%}
+  .hero .bit{left:var(--mx,var(--x));top:var(--my,var(--y))}
+  .hero .bit.opt{display:none}
+  .hero .bit{--s:.82}
+  .scroll-hint{display:none}
+  .steps{grid-template-columns:1fr 1fr}
+  .cabinet{grid-template-columns:1fr}
+  .drawer{border-right:0!important;border-bottom:1.5px solid var(--ink-2)!important}
+  .drawer:last-child{border-bottom:0!important}
+  .note-ph{display:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+
+<div class="sheet">
+  <div class="wrap">
+    <header class="top">
+      <a class="mark" href="#top"><i aria-hidden="true"></i>Allanah</a>
+      <nav aria-label="Sections">
+        <a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a><a href="#contact">Contact</a>
+      </nav>
+      <!-- Work-in-progress tag: delete this one line when the site is finished -->
+      <div class="wip" role="note"><b>Work in progress</b><span>new pieces added every week</span></div>
+    </header>
+  </div>
+
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <!-- Scraps from a writer's desk. Real text, so screen readers and search engines can read them. -->
+    <div class="bit idx" style="--x:15%;--y:22%;--r:-6deg;--mx:30%;--my:11%"><b>HEADLINE, TAKE 3</b>Why your best customers never read your About page</div>
+    <div class="bit ticket" style="--x:44%;--y:9%;--r:4deg;--mx:78%;--my:6%"><small>DEADLINE</small>FRI 5:00 PM</div>
+    <div class="bit sticky opt" style="--x:83%;--y:18%;--r:5deg">intro too long? cut to the point!</div>
+    <div class="bit stamp" style="--x:66%;--y:12%;--r:-14deg;--mx:80%;--my:19%">Fact<br>checked</div>
+    <div class="bit pill" style="--x:9%;--y:52%;--r:-3deg;--mx:24%;--my:80%">1,200 words</div>
+    <div class="bit receipt opt" style="--x:88%;--y:52%;--r:3deg">
+      <div>DRAFT 3</div><hr>
+      <div class="row"><span>words</span><span>1,480</span></div>
+      <div class="row"><span>read</span><span>6 min</span></div>
+      <div class="row"><span>links</span><span>4</span></div><hr>
+      <div>PROOFREAD ✓</div>
+    </div>
+    <div class="bit tabcard" style="--x:21%;--y:80%;--r:-4deg;--mx:72%;--my:81%">Blog</div>
+    <div class="bit tag" style="--x:76%;--y:84%;--r:6deg;--mx:42%;--my:92%">#web-copy</div>
+    <div class="bit label opt" style="--x:38%;--y:89%;--r:-2deg">CTA</div>
+    <div class="bit clipnote opt" style="--x:29%;--y:12%;--r:-9deg"><span class="r">SEO NOTE</span><br>keyword in the first 100 words</div>
+    <div class="bit edit" style="--x:85%;--y:34%;--r:-4deg;--mx:30%;--my:25%">a <s>very</s><ins>truly</ins> useful guide</div>
+    <div class="bit chip opt" style="--x:7%;--y:76%;--r:8deg">SCRIPT</div>
+
+    <div id="paper3d" aria-hidden="true"></div>
+    <div class="hero-copy wrap">
+      <div class="eyebrow" style="margin:0 0 16px">Content writer</div>
+      <h1 id="hero-title">Got a story<span class="dot">?</span></h1>
+      <p>I write <strong>words people read to the end</strong>: articles, web copy, social posts and video scripts.</p>
+      <div class="cta">
+        <a class="btn" href="#work">See my work</a>
+        <a class="btn ghost" href="#contact">Work with me</a>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">scroll, the desk tidies itself ↓</div>
+  </section>
+
+  <section class="block" id="about" aria-labelledby="about-title">
+    <div class="wrap about">
+      <article class="about-card">
+        <span class="staple" style="left:24px" aria-hidden="true"></span>
+        <span class="staple" style="right:24px" aria-hidden="true"></span>
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">Hi, I'm Allanah. I write things people actually read.</h2>
+        <p><span class="ph">Two or three sentences about you: how you got into writing, the topics you love, and what makes your writing different.</span></p>
+        <p>I write articles, blog posts, website copy, social content and video scripts. Whatever the format, the job is the same: find the angle, get the facts right, and hand over copy that's ready to publish.</p>
+        <p><span class="ph">One line on what you're looking for next (new clients, a staff role, freelance projects).</span></p>
+      </article>
+      <aside class="facts" aria-label="Quick facts">
+        <div class="fact"><span class="k">I write</span><span class="v">Articles · Blogs · Web copy · Social · Scripts</span></div>
+        <div class="fact"><span class="k">Written for</span><span class="v"><span class="ph">Client or brand names</span></span></div>
+        <div class="fact"><span class="k">Based in</span><span class="v"><span class="ph">City, Country</span></span></div>
+        <div class="fact hand"><span class="k">Currently</span><span class="v"><span class="ph">open to new projects!</span></span></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block" id="work" aria-labelledby="work-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Selected work</p>
+        <h2 id="work-title">The filing cabinet</h2>
+        <p>Published pieces, sorted by type. Each link opens the finished piece.</p>
+      </div>
+      <div class="folder">
+        <div class="tabs" role="tablist" aria-label="Types of writing">
+          <button role="tab" id="tab-art" aria-controls="p-art" aria-selected="true">Articles &amp; blogs<small>long-form</small></button>
+          <button role="tab" id="tab-web" aria-controls="p-web" aria-selected="false" tabindex="-1">Web copy<small>pages &amp; emails</small></button>
+          <button role="tab" id="tab-soc" aria-controls="p-soc" aria-selected="false" tabindex="-1">Social<small>posts &amp; captions</small></button>
+          <button role="tab" id="tab-scr" aria-controls="p-scr" aria-selected="false" tabindex="-1">Scripts<small>video</small></button>
+        </div>
+        <div class="panel-wrap">
+          <div class="panel" role="tabpanel" id="p-art" aria-labelledby="tab-art">
+            <div class="panel-top"><p>Researched articles and blog posts, written to be read start to finish and found on Google.</p><span class="count">3 shown</span></div>
+            <div class="tbl-scroll"><table>
+              <thead><tr><th scope="col">Piece</th><th scope="col">Client</th><th scope="col">Length</th><th scope="col">Published</th><th scope="col"><span class="sr">Link</span></th></tr></thead>
+              <tbody>
+                <tr><td class="t"><span class="ph">Article title</span></td><td><span class="ph">Client</span></td><td class="num"><span class="ph">1,500 words</span></td><td class="num"><span class="ph">Mon YYYY</span></td><td><a class="go" href="#" aria-label="Read piece (link to add)">Read ↗</a></td></tr>
+                <tr><td class="t"><span class="ph">Blog post title</span></td><td><span class="ph">Client</span></td><td class="num"><span class="ph">900 words</span></td><td class="num"><span class="ph">Mon YYYY</span></td><td><a class="go" href="#" aria-label="Read piece (link to add)">Read ↗</a></td></tr>
+                <tr><td class="t"><span class="ph">Article title</span></td><td><span class="ph">Client</span></td><td class="num"><span class="ph">2,000 words</span></td><td class="num"><span class="ph">Mon YYYY</span></td><td><a class="go" href="#" aria-label="Read piece (link to add)">Read ↗</a></td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="panel" role="tabpanel" id="p-web" aria-labelledby="tab-web" hidden>
+            <div class="panel-top"><p>Landing pages, About pages, product descriptions and email newsletters.</p><span class="count">2 shown</span></div>
+            <div class="tbl-scroll"><table>
+              <thead><tr><th scope="col">Piece</th><th scope="col">Client</th><th scope="col">Type</th><th scope="col">Published</th><th scope="col"><span class="sr">Link</span></th></tr></thead>
+              <tbody>
+                <tr><td class="t"><span class="ph">Page or campaign name</span></td><td><span class="ph">Client</span></td><td><span class="role w">Landing page</span></td><td class="num"><span class="ph">Mon YYYY</span></td><td><a class="go" href="#" aria-label="View piece (link to add)">View ↗</a></td></tr>
+                <tr><td class="t"><span class="ph">Newsletter name</span></td><td><span class="ph">Client</span></td><td><span class="role f">Email</span></td><td class="num"><span class="ph">Mon YYYY</span></td><td><a class="go" href="#" aria-label="View piece (link to add)">View ↗</a></td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="panel" role="tabpanel" id="p-soc" aria-labelledby="tab-soc" hidden>
+            <div class="panel-top"><p>Captions, threads and post series that sound like the brand and get people talking.</p><span class="count">2 shown</span></div>
+            <div class="tbl-scroll"><table>
+              <thead><tr><th scope="col">Piece</th><th scope="col">Client</th><th scope="col">Platform</th><th scope="col">Published</th><th scope="col"><span class="sr">Link</span></th></tr></thead>
+              <tbody>
+                <tr><td class="t"><span class="ph">Campaign or series name</span></td><td><span class="ph">Client</span></td><td><span class="role r"><span class="ph">Instagram</span></span></td><td class="num"><span class="ph">Mon YYYY</span></td><td><a class="go" href="#" aria-label="View piece (link to add)">View ↗</a></td></tr>
+                <tr><td class="t"><span class="ph">Campaign or series name</span></td><td><span class="ph">Client</span></td><td><span class="role r"><span class="ph">LinkedIn</span></span></td><td class="num"><span class="ph">Mon YYYY</span></td><td><a class="go" href="#" aria-label="View piece (link to add)">View ↗</a></td></tr>
+              </tbody>
+            </table></div>
+          </div>
+          <div class="panel" role="tabpanel" id="p-scr" aria-labelledby="tab-scr" hidden>
+            <div class="panel-top"><p>Long-form YouTube scripts: researched, written for voiceover and laid out for the editor.</p><span class="count">2 shown</span></div>
+            <div class="tbl-scroll"><table>
+              <thead><tr><th scope="col">Video</th><th scope="col">Channel</th><th scope="col">My role</th><th scope="col">Published</th><th scope="col"><span class="sr">Link</span></th></tr></thead>
+              <tbody>
+                <tr><td class="t"><span class="ph">Video title</span></td><td><span class="ph">Channel</span></td><td><span class="role w">Writer</span></td><td class="num"><span class="ph">Mon YYYY</span></td><td><a class="go" href="#" aria-label="Watch video (link to add)">Watch ↗</a></td></tr>
+                <tr><td class="t"><span class="ph">Video title</span></td><td><span class="ph">Channel</span></td><td><span class="role r">Reviewer</span></td><td class="num"><span class="ph">Mon YYYY</span></td><td><a class="go" href="#" aria-label="Watch video (link to add)">Watch ↗</a></td></tr>
+              </tbody>
+            </table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="services" aria-labelledby="services-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What I do</p>
+        <h2 id="services-title">Every drawer is a skill</h2>
+        <p>Hire me for a whole project, or just the part you need.</p>
+      </div>
+      <div class="cabinet">
+        <div class="drawer"><div class="holder"><span style="--c:var(--pink)">Articles &amp; blogs</span></div><div class="pull" aria-hidden="true"></div><p>Researched, search-friendly posts with a clear angle and a reason to keep reading.</p></div>
+        <div class="drawer"><div class="holder"><span style="--c:var(--sage)">Website copy</span></div><div class="pull" aria-hidden="true"></div><p>Home, About and landing pages that explain what you do in plain words and lead to one clear next step.</p></div>
+        <div class="drawer"><div class="holder"><span style="--c:var(--hl)">Social content</span></div><div class="pull" aria-hidden="true"></div><p>Captions, threads and post series written in your brand's voice, not a template's.</p></div>
+        <div class="drawer"><div class="holder"><span style="--c:var(--manila)">Video scripts</span></div><div class="pull" aria-hidden="true"></div><p>Long-form YouTube scripts written for the ear, with a strong hook and notes the editor can follow.</p></div>
+        <div class="drawer"><div class="holder"><span style="--c:color-mix(in srgb,var(--blue) 30%,var(--paper))">Editing</span></div><div class="pull" aria-hidden="true"></div><p>Line edits, proofreading and structural feedback, given as exact changes rather than vague notes.</p></div>
+        <div class="drawer"><div class="holder"><span style="--c:color-mix(in srgb,var(--clay) 40%,var(--paper))">Research</span></div><div class="pull" aria-hidden="true"></div><p>Sources checked, facts verified and the latest updates found before anything is published.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="process-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How I work</p>
+        <h2 id="process-title">From brief to published</h2>
+      </div>
+      <ol class="steps">
+        <li><span class="n">01</span><h3>Brief</h3><p>Who it's for, what it should do, and when it's due.</p></li>
+        <li><span class="n">02</span><h3>Research</h3><p>Sources, data and the detail nobody else found.</p></li>
+        <li><span class="n">03</span><h3>Outline</h3><p>The angle and structure, agreed before drafting.</p></li>
+        <li><span class="n">04</span><h3>Draft</h3><p>Clear, specific and written in your voice.</p></li>
+        <li><span class="n">05</span><h3>Edit</h3><p>Fact-checked, tightened and proofread.</p></li>
+        <li><span class="n">06</span><h3>Deliver</h3><p>Ready to publish, with one round of revisions included.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="kind-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Kind words</p>
+        <h2 id="kind-title">Mail from people I've worked with</h2>
+      </div>
+      <div class="stamps">
+        <figure class="stampcard" style="margin:0"><div class="stamp-in" style="--c:var(--pink)"><blockquote><span class="ph">A short quote from a client or editor about working with you.</span></blockquote><div><cite><span class="ph">Name, role, company</span></cite><div class="val">25¢</div></div></div></figure>
+        <figure class="stampcard" style="margin:0"><div class="stamp-in" style="--c:var(--sage)"><blockquote><span class="ph">A second quote, ideally about reliability, deadlines or research.</span></blockquote><div><cite><span class="ph">Name, role, company</span></cite><div class="val">25¢</div></div></div></figure>
+        <figure class="stampcard" style="margin:0"><div class="stamp-in" style="--c:var(--manila)"><blockquote><span class="ph">A third quote, or a result like traffic, sign-ups or views from something you wrote.</span></blockquote><div><cite><span class="ph">Name, role, company</span></cite><div class="val">25¢</div></div></div></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact" aria-labelledby="contact-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="envelope">
+        <div class="env-l">
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Tell me what you need written.</h2>
+          <p>Send me a line about your project, who it's for and your deadline. I usually reply within <span class="ph">two days</span>.</p>
+          <div class="addr">
+            <code id="email"><span class="ph">you@example.com</span></code>
+            <button class="btn" id="copy" type="button">Copy email</button>
+          </div>
+          <p class="copied" id="copied" aria-live="polite"></p>
+        </div>
+        <div class="env-r">
+          <div class="postmark" aria-hidden="true">WRITTEN<br>BY HAND<br>2026</div>
+          <ul class="links">
+            <li><a href="#"><span>LinkedIn</span><span class="ph">/in/you</span></a></li>
+            <li><a href="#"><span>Blog or Substack</span><span class="ph">link</span></a></li>
+            <li><a href="#"><span>Instagram</span><span class="ph">@handle</span></a></li>
+            <li><a href="#"><span>Résumé</span><span class="ph">PDF link</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div style="height:40px"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div><b>Allanah</b><span>Content writer</span></div>
+      <div><b>Pages</b><a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a></div>
+      <div><b>Say hi</b><a href="#contact">Contact</a></div>
+      <div><b>©2026</b><span>All words my own.</span></div>
+    </div>
+  </div>
+  <svg class="plane" viewBox="0 0 64 40" aria-hidden="true"><path d="M2 20 62 2 40 38 30 24Z" fill="var(--paper)" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M62 2 30 24 28 36 36 28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+  <div class="wordmark" aria-hidden="true">allanah</div>
+</footer>
+
+<style>.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}</style>
+
+<style>
+/* Motion, modeled on Feather's approach (CSS keyframes, no 3D): letters spread, scraps stamp down then drift,
+   sections settle in as they scroll into view, table text unscrambles, a paper plane drifts across the footer. */
+.hero .bit{scale:var(--s,1)}
+.drawer .holder,.drawer .pull{transition:transform .35s cubic-bezier(.2,1.3,.4,1)}
+.drawer:hover .holder{transform:translateY(-4px) rotate(-1.5deg)}
+.drawer:hover .pull{transform:translateY(3px)}
+footer{position:relative}
+.plane{position:absolute;top:30%;left:0;width:64px;height:auto;color:var(--ink-2);pointer-events:none;opacity:.8}
+@media (prefers-reduced-motion:no-preference){
+  .ltr{display:inline-block;animation:spread .95s cubic-bezier(.16,.9,.25,1) both;animation-delay:calc(var(--i)*28ms + .1s)}
+  @keyframes spread{from{transform:translateX(var(--dx,0)) scale(.6);opacity:0;filter:blur(4px)}to{transform:none;opacity:1;filter:none}}
+  .hero .bit{animation:drop .65s cubic-bezier(.2,1.35,.4,1) both,drift 5.5s ease-in-out infinite alternate;animation-delay:calc(var(--d,0)*70ms + .35s),calc(var(--d,0)*-900ms)}
+  .hero .bit.stamp{animation-name:thunk,drift;animation-duration:.5s,5.5s;animation-timing-function:cubic-bezier(.5,0,.75,0),ease-in-out;animation-delay:1.3s,0s}
+  @keyframes drop{from{opacity:0;scale:calc(var(--s,1)*1.3)}to{opacity:1;scale:var(--s,1)}}
+  @keyframes thunk{0%{opacity:0;scale:calc(var(--s,1)*2.4)}70%{opacity:1;scale:calc(var(--s,1)*.92)}100%{opacity:.95;scale:var(--s,1)}}
+  @keyframes drift{from{translate:0 0}to{translate:0 -7px}}
+  .pre{opacity:0;translate:0 28px}
+  .stampcard.pre{translate:0 0;scale:1.25}
+  .in{transition:opacity .7s ease,translate .8s cubic-bezier(.2,1,.3,1),scale .45s cubic-bezier(.5,0,.75,0);transition-delay:var(--d,0s)}
+  .plane{animation:fly 16s linear infinite}
+  @keyframes fly{0%{transform:translate(-80px,40px) rotate(-8deg)}25%{transform:translate(25vw,-10px) rotate(4deg)}50%{transform:translate(50vw,30px) rotate(-6deg)}75%{transform:translate(75vw,-20px) rotate(5deg)}100%{transform:translate(calc(100vw + 80px),10px) rotate(-4deg)}}
+  .scr{color:var(--ink-2)}
+}
+</style>
+<style>#paper3d{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);width:min(860px,100%);height:min(540px,72%);z-index:1;pointer-events:none}#paper3d canvas{display:block}@media (max-width:640px){#paper3d{top:50%;height:440px}}</style>
+<script>
+(function(){
+  /* Tabs (keyboard: arrows, Home, End) */
+  const tabs=[...document.querySelectorAll('[role=tab]')];
+  function select(t){tabs.forEach(b=>{const on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on});t.focus({preventScroll:true});try{localStorage.setItem('tab',t.id)}catch(e){}}
+  tabs.forEach((t,i)=>{t.addEventListener('click',()=>select(t));t.addEventListener('keydown',e=>{let j=null;if(e.key==='ArrowRight')j=(i+1)%tabs.length;if(e.key==='ArrowLeft')j=(i-1+tabs.length)%tabs.length;if(e.key==='Home')j=0;if(e.key==='End')j=tabs.length-1;if(j!==null){e.preventDefault();select(tabs[j])}})});
+  try{const s=localStorage.getItem('tab');const t=s&&document.getElementById(s);if(t){tabs.forEach(b=>{const on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on})}}catch(e){}
+
+  /* Copy email */
+  const btn=document.getElementById('copy'),out=document.getElementById('copied'),em=document.getElementById('email');
+  btn.addEventListener('click',()=>{const txt=em.textContent.trim();const done=()=>{out.textContent='copied!'};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,()=>{sel();})}else sel();
+    function sel(){const r=document.createRange();r.selectNodeContents(em);const s=getSelection();s.removeAllRanges();s.addRange(r);out.textContent='selected, press copy'}});
+
+  /* Hero: scattered scraps tidy into a row as the hero scrolls away */
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  const hero=document.querySelector('.hero');
+  let bits=[],targets=[];
+  function layout(){
+    bits=[...hero.querySelectorAll('.bit')].filter(b=>getComputedStyle(b).display!=='none');
+    const hr=hero.getBoundingClientRect();
+    bits.forEach(b=>b.style.transform='');
+    const ws=bits.map(b=>b.offsetWidth),gap=-8;
+    const total=ws.reduce((a,w)=>a+w+gap,-gap);
+    const avail=hr.width*0.94,s=Math.min(1,avail/total);
+    let x=(hr.width-total*s)/2;const y=hr.height*0.78;
+    targets=bits.map((b,i)=>{const cx=x+ws[i]*s/2;x+=(ws[i]+gap)*s;
+      const sx=b.offsetLeft,sy=b.offsetTop;return{dx:cx-sx,dy:y-sy,s,r:parseFloat(getComputedStyle(b).getPropertyValue('--r'))||0}});
+    tick();
+  }
+  function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+  function tick(){
+    const hr=hero.getBoundingClientRect();
+    const p=ease(Math.min(1,Math.max(0,-hr.top/(hr.height*0.55))));
+    bits.forEach((b,i)=>{const t=targets[i];if(!t)return;
+      const r=t.r*(1-p)+(i%2?1.5:-1.5)*p, sc=1+(t.s-1)*p;
+      b.style.transform=`translate(-50%,-50%) translate(${t.dx*p}px,${t.dy*p}px) rotate(${r}deg) scale(${sc})`});
+    hero.querySelector('.hero-copy').style.opacity=String(1-p*0.85);
+  }
+  let raf=0;addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(()=>{raf=0;tick()})},{passive:true});
+  addEventListener('resize',layout);
+  (document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(layout);
+  layout();
+})();
+</script>
+
+<script>
+(function(){
+  if(!matchMedia('(prefers-reduced-motion: no-preference)').matches)return;
+  /* 1. Headline letters spread out from the middle */
+  const h=document.getElementById('hero-title');
+  const label=h.textContent;h.setAttribute('aria-label',label);
+  const nodes=[...h.childNodes];h.textContent='';let i=0;
+  nodes.forEach(n=>{const wrap=n.nodeType===1?n.cloneNode(false):null;const txt=n.textContent;const host=wrap||h;
+    [...txt].forEach(ch=>{const sp=document.createElement('span');sp.className='ltr';sp.setAttribute('aria-hidden','true');sp.style.setProperty('--i',i++);sp.textContent=ch===' '?' ':ch;host.appendChild(sp)});
+    if(wrap)h.appendChild(wrap)});
+  const hb=h.getBoundingClientRect(),mid=hb.left+hb.width/2;
+  h.querySelectorAll('.ltr').forEach(sp=>{const b=sp.getBoundingClientRect();sp.style.setProperty('--dx',(mid-(b.left+b.width/2))*.85+'px')});
+  /* 2. Stagger the scraps */
+  document.querySelectorAll('.hero .bit').forEach((b,k)=>b.style.setProperty('--d',k));
+  /* 3. Sections settle in when they scroll into view (only ones below the fold, so the first screen is complete) */
+  const groups=[['.about-card,.fact',90],['.drawer',60],['.steps li',80],['.stampcard',160],['.envelope',0],['.sec-head',0],['.folder',0]];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.classList.remove('pre');io.unobserve(e.target)}}),{rootMargin:'0px 0px -12% 0px'});
+  groups.forEach(([sel,step])=>document.querySelectorAll(sel).forEach((el,k)=>{if(el.getBoundingClientRect().top>innerHeight){el.style.setProperty('--d',(k%6)*step+'ms');el.classList.add('pre');io.observe(el)}}));
+  /* 4. Table text unscrambles, like a filing card being read */
+  const glyphs='abcdefghijklmnopqrstuvwxyz0123456789';
+  function scramble(panel){panel.querySelectorAll('td.t,td.num,td:nth-child(2)').forEach((td,k)=>{const leaf=td.querySelector('.ph')||td;if(leaf.children.length)return;
+    const fin=leaf.dataset.fin||(leaf.dataset.fin=leaf.textContent);let f=0;const total=14+k*2;leaf.classList.add('scr');
+    const t=setInterval(()=>{f++;const keep=Math.floor(fin.length*f/total);leaf.textContent=fin.slice(0,keep)+[...fin.slice(keep)].map(c=>c===' '?' ':glyphs[Math.random()*glyphs.length|0]).join('');
+      if(f>=total){clearInterval(t);leaf.textContent=fin;leaf.classList.remove('scr')}},35)})}
+  document.querySelectorAll('[role=tab]').forEach(t=>t.addEventListener('click',()=>scramble(document.getElementById(t.getAttribute('aria-controls')))));
+  const folder=document.querySelector('.folder');
+  const fo=new IntersectionObserver(es=>{if(es[0].isIntersecting){scramble(document.querySelector('.panel:not([hidden])'));fo.disconnect()}},{threshold:.3});fo.observe(folder);
+})();
+</script>
+<script src="paper3d.js" defer></script>
+
+</body>
+</html>
