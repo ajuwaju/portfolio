@@ -316,62 +316,117 @@ footer{padding-top:56px;overflow:hidden}
       <div class="sec-head">
         <p class="eyebrow">Selected work</p>
         <h2 id="work-title">The filing cabinet</h2>
-        <p>Pull out a drawer to see the pieces inside. Each link opens the finished piece.</p>
+        <p>Every drawer holds one kind of writing. Open one to see what's inside.</p>
       </div>
-      <div class="files">
-        <div class="cab-wrap">
-          <div class="cab" role="tablist" aria-label="Types of writing" aria-orientation="vertical">
-            <!-- Each drawer: a button (the drawer front) plus decorative 3D insides. Add a drawer by copying one block. -->
-            <button class="dr" role="tab" id="tab-art" aria-controls="p-art" aria-selected="true" style="--c:var(--pink)">
-              <span class="dr-in" aria-hidden="true"><i>Article</i><i>Blog</i><i>Guide</i><i>Essay</i></span>
-                            <span class="dr-front"><span class="dr-label">Articles &amp; blogs</span><span class="dr-handle" aria-hidden="true"></span><small>long-form</small></span>
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="sketch" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="1.4"/></filter></svg>
+      <div class="stage" id="stage">
+        <!-- To add a drawer: copy a button here and a matching cdrawer-panel below (same id). -->
+        <div class="ccab" role="group" aria-label="Types of writing">
+            <button class="cdrawer" type="button" aria-expanded="false" aria-controls="p-art" style="--c:var(--pink)">
+              <svg class="sk" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true"><rect x="1" y="1" width="98" height="48" fill="none" vector-effect="non-scaling-stroke" filter="url(#sketch)"/></svg>
+              <span class="chold"><span>Articles</span></span>
+              <svg class="keyhole" viewBox="0 0 10 16" aria-hidden="true"><circle cx="5" cy="5" r="3.6"/><path d="M3.4 7.5 2.6 14h4.8L6.6 7.5"/></svg>
+              <span class="knob" aria-hidden="true"></span>
+              <span class="sr">, 3 pieces</span>
             </button>
-            <button class="dr" role="tab" id="tab-web" aria-controls="p-web" aria-selected="false" tabindex="-1" style="--c:var(--sage)">
-              <span class="dr-in" aria-hidden="true"><i>Home</i><i>About</i><i>Email</i><i>Launch</i></span>
-                            <span class="dr-front"><span class="dr-label">Web copy</span><span class="dr-handle" aria-hidden="true"></span><small>pages &amp; emails</small></span>
+<button class="cdrawer" type="button" aria-expanded="false" aria-controls="p-blog" style="--c:var(--sage)">
+              <svg class="sk" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true"><rect x="1" y="1" width="98" height="48" fill="none" vector-effect="non-scaling-stroke" filter="url(#sketch)"/></svg>
+              <span class="chold"><span>Blog posts</span></span>
+              <svg class="keyhole" viewBox="0 0 10 16" aria-hidden="true"><circle cx="5" cy="5" r="3.6"/><path d="M3.4 7.5 2.6 14h4.8L6.6 7.5"/></svg>
+              <span class="knob" aria-hidden="true"></span>
+              <span class="sr">, 2 pieces</span>
             </button>
-            <button class="dr" role="tab" id="tab-soc" aria-controls="p-soc" aria-selected="false" tabindex="-1" style="--c:var(--hl)">
-              <span class="dr-in" aria-hidden="true"><i>Caption</i><i>Thread</i><i>Carousel</i><i>Reel</i></span>
-                            <span class="dr-front"><span class="dr-label">Social</span><span class="dr-handle" aria-hidden="true"></span><small>posts &amp; captions</small></span>
+<button class="cdrawer" type="button" aria-expanded="false" aria-controls="p-web" style="--c:var(--hl)">
+              <svg class="sk" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true"><rect x="1" y="1" width="98" height="48" fill="none" vector-effect="non-scaling-stroke" filter="url(#sketch)"/></svg>
+              <span class="chold"><span>Web copy</span></span>
+              <svg class="keyhole" viewBox="0 0 10 16" aria-hidden="true"><circle cx="5" cy="5" r="3.6"/><path d="M3.4 7.5 2.6 14h4.8L6.6 7.5"/></svg>
+              <span class="knob" aria-hidden="true"></span>
+              <span class="sr">, 2 pieces</span>
             </button>
-            <button class="dr" role="tab" id="tab-scr" aria-controls="p-scr" aria-selected="false" tabindex="-1" style="--c:color-mix(in srgb,var(--blue) 35%,var(--paper))">
-              <span class="dr-in" aria-hidden="true"><i>Hook</i><i>Draft 3</i><i>Final</i><i>VO</i></span>
-                            <span class="dr-front"><span class="dr-label">Scripts</span><span class="dr-handle" aria-hidden="true"></span><small>video</small></span>
+<button class="cdrawer" type="button" aria-expanded="false" aria-controls="p-soc" style="--c:color-mix(in srgb,var(--blue) 30%,var(--paper))">
+              <svg class="sk" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true"><rect x="1" y="1" width="98" height="48" fill="none" vector-effect="non-scaling-stroke" filter="url(#sketch)"/></svg>
+              <span class="chold"><span>Social</span></span>
+              <svg class="keyhole" viewBox="0 0 10 16" aria-hidden="true"><circle cx="5" cy="5" r="3.6"/><path d="M3.4 7.5 2.6 14h4.8L6.6 7.5"/></svg>
+              <span class="knob" aria-hidden="true"></span>
+              <span class="sr">, 2 pieces</span>
             </button>
-          </div>
-          <div class="cab-base" aria-hidden="true"></div>
+<button class="cdrawer" type="button" aria-expanded="false" aria-controls="p-scr" style="--c:var(--manila)">
+              <svg class="sk" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true"><rect x="1" y="1" width="98" height="48" fill="none" vector-effect="non-scaling-stroke" filter="url(#sketch)"/></svg>
+              <span class="chold"><span>Scripts</span></span>
+              <svg class="keyhole" viewBox="0 0 10 16" aria-hidden="true"><circle cx="5" cy="5" r="3.6"/><path d="M3.4 7.5 2.6 14h4.8L6.6 7.5"/></svg>
+              <span class="knob" aria-hidden="true"></span>
+              <span class="sr">, 2 pieces</span>
+            </button>
+<button class="cdrawer" type="button" aria-expanded="false" aria-controls="p-mail" style="--c:color-mix(in srgb,var(--clay) 40%,var(--paper))">
+              <svg class="sk" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true"><rect x="1" y="1" width="98" height="48" fill="none" vector-effect="non-scaling-stroke" filter="url(#sketch)"/></svg>
+              <span class="chold"><span>Newsletters</span></span>
+              <svg class="keyhole" viewBox="0 0 10 16" aria-hidden="true"><circle cx="5" cy="5" r="3.6"/><path d="M3.4 7.5 2.6 14h4.8L6.6 7.5"/></svg>
+              <span class="knob" aria-hidden="true"></span>
+              <span class="sr">, 1 piece</span>
+            </button>
         </div>
-
-        <div class="tray">
-          <div class="panel" role="tabpanel" id="p-art" aria-labelledby="tab-art" tabindex="0">
-            <p class="tray-note">Researched articles and blog posts, written to be read start to finish and found on Google.</p>
-            <ul class="cards">
-              <li class="fc"><span class="fc-k">Article</span><h3><span class="ph">Article title</span></h3><p><span class="ph">Client</span> · <span class="ph">1,500 words</span> · <span class="ph">Mon YYYY</span></p><a class="go" href="#">Read ↗</a></li>
-              <li class="fc"><span class="fc-k">Blog post</span><h3><span class="ph">Blog post title</span></h3><p><span class="ph">Client</span> · <span class="ph">900 words</span> · <span class="ph">Mon YYYY</span></p><a class="go" href="#">Read ↗</a></li>
-              <li class="fc"><span class="fc-k">Article</span><h3><span class="ph">Article title</span></h3><p><span class="ph">Client</span> · <span class="ph">2,000 words</span> · <span class="ph">Mon YYYY</span></p><a class="go" href="#">Read ↗</a></li>
-            </ul>
+        <div class="pulled" aria-hidden="true">
+          <svg class="box-back" viewBox="0 0 400 300" preserveAspectRatio="none"><polygon class="inside" points="0,100 360,100 400,40 40,40"/><polygon class="wall" points="360,100 400,40 400,240 360,300"/><g fill="none" vector-effect="non-scaling-stroke" filter="url(#sketch)"><polyline points="0,100 40,40 400,40 360,100"/><polyline points="400,40 400,240 360,300"/></g></svg>
+          <div class="papers"></div>
+          <div class="box-front">
+            <svg class="sk" viewBox="0 0 100 50" preserveAspectRatio="none"><rect x="1" y="1" width="98" height="48" fill="none" vector-effect="non-scaling-stroke" filter="url(#sketch)"/></svg>
+            <span class="chold"><span class="pulled-label"></span></span>
+            <svg class="keyhole" viewBox="0 0 10 16"><circle cx="5" cy="5" r="3.6"/><path d="M3.4 7.5 2.6 14h4.8L6.6 7.5"/></svg>
+            <span class="knob"></span>
           </div>
-          <div class="panel" role="tabpanel" id="p-web" aria-labelledby="tab-web" tabindex="0" hidden>
-            <p class="tray-note">Landing pages, About pages, product descriptions and email newsletters.</p>
-            <ul class="cards">
-              <li class="fc"><span class="fc-k">Landing page</span><h3><span class="ph">Page or campaign name</span></h3><p><span class="ph">Client</span> · <span class="ph">Mon YYYY</span></p><a class="go" href="#">View ↗</a></li>
-              <li class="fc"><span class="fc-k">Email</span><h3><span class="ph">Newsletter name</span></h3><p><span class="ph">Client</span> · <span class="ph">Mon YYYY</span></p><a class="go" href="#">View ↗</a></li>
-            </ul>
+        </div>
+        <div class="contents" hidden>
+          <div class="contents-scroll">
+            <div class="cdrawer-panel" id="p-art" hidden>
+              <h3 tabindex="-1">Articles<small>3 pieces</small></h3>
+              <p class="tray-note">Researched articles, written to be read start to finish and found on Google.</p>
+              <ul class="entries">
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Article title</span></h4><span class="e-meta"><span class="ph">1,500 words</span></span></div><a class="go" href="#">Read ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Article title</span></h4><span class="e-meta"><span class="ph">2,000 words</span></span></div><a class="go" href="#">Read ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Article title</span></h4><span class="e-meta"><span class="ph">1,200 words</span></span></div><a class="go" href="#">Read ↗</a></li>
+              </ul>
+            </div>
+<div class="cdrawer-panel" id="p-blog" hidden>
+              <h3 tabindex="-1">Blog posts<small>2 pieces</small></h3>
+              <p class="tray-note">Blog posts that answer a real question in a voice people remember.</p>
+              <ul class="entries">
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Blog post title</span></h4><span class="e-meta"><span class="ph">900 words</span></span></div><a class="go" href="#">Read ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Blog post title</span></h4><span class="e-meta"><span class="ph">1,100 words</span></span></div><a class="go" href="#">Read ↗</a></li>
+              </ul>
+            </div>
+<div class="cdrawer-panel" id="p-web" hidden>
+              <h3 tabindex="-1">Web copy<small>2 pieces</small></h3>
+              <p class="tray-note">Home, About and landing pages that explain what you do in plain words.</p>
+              <ul class="entries">
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Landing page name</span></h4><span class="e-meta"><span class="ph">Landing page</span></span></div><a class="go" href="#">View ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">About page</span></h4><span class="e-meta"><span class="ph">Website</span></span></div><a class="go" href="#">View ↗</a></li>
+              </ul>
+            </div>
+<div class="cdrawer-panel" id="p-soc" hidden>
+              <h3 tabindex="-1">Social<small>2 pieces</small></h3>
+              <p class="tray-note">Captions, threads and post series that sound like the brand.</p>
+              <ul class="entries">
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Campaign or series name</span></h4><span class="e-meta"><span class="ph">Instagram</span></span></div><a class="go" href="#">View ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Campaign or series name</span></h4><span class="e-meta"><span class="ph">LinkedIn</span></span></div><a class="go" href="#">View ↗</a></li>
+              </ul>
+            </div>
+<div class="cdrawer-panel" id="p-scr" hidden>
+              <h3 tabindex="-1">Scripts<small>2 pieces</small></h3>
+              <p class="tray-note">Long-form YouTube scripts: researched, written for voiceover, laid out for the editor.</p>
+              <ul class="entries">
+                <li class="entry"><span class="badge" aria-hidden="true">CH</span><div class="e-body"><span class="e-top"><span class="ph">Channel</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Video title</span></h4><span class="e-meta"><span class="ph">Writer</span></span></div><a class="go" href="#">Watch ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CH</span><div class="e-body"><span class="e-top"><span class="ph">Channel</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Video title</span></h4><span class="e-meta"><span class="ph">Reviewer</span></span></div><a class="go" href="#">Watch ↗</a></li>
+              </ul>
+            </div>
+<div class="cdrawer-panel" id="p-mail" hidden>
+              <h3 tabindex="-1">Newsletters<small>1 piece</small></h3>
+              <p class="tray-note">Newsletters and email sequences people actually open.</p>
+              <ul class="entries">
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Newsletter name</span></h4><span class="e-meta"><span class="ph">Email series</span></span></div><a class="go" href="#">Read ↗</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="panel" role="tabpanel" id="p-soc" aria-labelledby="tab-soc" tabindex="0" hidden>
-            <p class="tray-note">Captions, threads and post series that sound like the brand and get people talking.</p>
-            <ul class="cards">
-              <li class="fc"><span class="fc-k"><span class="ph">Instagram</span></span><h3><span class="ph">Campaign or series name</span></h3><p><span class="ph">Client</span> · <span class="ph">Mon YYYY</span></p><a class="go" href="#">View ↗</a></li>
-              <li class="fc"><span class="fc-k"><span class="ph">LinkedIn</span></span><h3><span class="ph">Campaign or series name</span></h3><p><span class="ph">Client</span> · <span class="ph">Mon YYYY</span></p><a class="go" href="#">View ↗</a></li>
-            </ul>
-          </div>
-          <div class="panel" role="tabpanel" id="p-scr" aria-labelledby="tab-scr" tabindex="0" hidden>
-            <p class="tray-note">Long-form YouTube scripts: researched, written for voiceover and laid out for the editor.</p>
-            <ul class="cards">
-              <li class="fc"><span class="fc-k">Writer</span><h3><span class="ph">Video title</span></h3><p><span class="ph">Channel</span> · <span class="ph">Mon YYYY</span></p><a class="go" href="#">Watch ↗</a></li>
-              <li class="fc"><span class="fc-k">Reviewer</span><h3><span class="ph">Video title</span></h3><p><span class="ph">Channel</span> · <span class="ph">Mon YYYY</span></p><a class="go" href="#">Watch ↗</a></li>
-            </ul>
-          </div>
+          <button class="btn putback" type="button">Put it back</button>
         </div>
       </div>
     </div>
@@ -496,58 +551,70 @@ footer{position:relative}
 </style>
 <style>#paper3d{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);width:min(860px,100%);height:min(540px,72%);z-index:1;pointer-events:none}#paper3d canvas{display:block}@media (max-width:640px){#paper3d{top:50%;height:440px}}</style>
 <style>
-/* 3D filing cabinet: drawers are tabs. The open drawer slides toward you in real CSS 3D and shows the cards inside. */
-.files{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
-.cab-wrap{position:relative;padding:18px 18px 0;background:var(--manila-2);border-radius:10px 10px 4px 4px;box-shadow:var(--shadow)}
-.cab{display:grid;gap:12px;perspective:900px;perspective-origin:50% -60%;padding-bottom:18px}
-.dr{--d:96px;position:relative;height:92px;border:0;padding:0;background:transparent;cursor:pointer;transform-style:preserve-3d;transition:transform .75s cubic-bezier(.2,.9,.25,1);text-align:left;font:inherit;color:var(--ink)}
-.dr[aria-selected="true"]{transform:translateZ(90px) translateY(-2px);z-index:2}
-.dr .dr-in{opacity:0;transition:opacity .25s}.dr[aria-selected="true"] .dr-in{opacity:1;transition:opacity .4s .25s}
-#work{overflow-x:clip}
-.dr:not([aria-selected="true"]):hover{transform:translateZ(14px)}
-.dr-front{position:absolute;inset:0;background:var(--manila);border-radius:4px;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto auto;align-content:center;column-gap:12px;padding:0 18px;box-shadow:inset 0 0 0 1.5px color-mix(in srgb,var(--ink) 18%,transparent),0 2px 0 color-mix(in srgb,var(--ink) 12%,transparent);transform:translateZ(0);backface-visibility:hidden}
-.dr-label{font:400 20px/1 var(--f-hand);background:var(--c);padding:7px 14px;border-radius:999px;border:1.5px solid color-mix(in srgb,var(--ink) 35%,transparent);justify-self:start}
-.dr-front small{grid-column:1;font:400 11px/1 var(--f-script);letter-spacing:.08em;color:var(--ink-2);margin-top:8px;padding-left:4px}
-.dr-handle{grid-column:2;grid-row:1/3;width:54px;height:16px;border-radius:0 0 14px 14px;border:2px solid color-mix(in srgb,var(--ink) 45%,transparent);border-top:0;align-self:center}
-/* drawer floor + cards, lying back from the front's top edge */
-.dr-in{position:absolute;left:8px;right:8px;top:0;height:var(--d);transform-origin:top;transform:rotateX(-90deg);transform-style:preserve-3d;background:color-mix(in srgb,var(--manila-2) 80%,#000 6%);display:flex;flex-direction:column-reverse;justify-content:flex-start;gap:0;padding:6px 10px}
-.dr-in i{display:block;height:26px;margin-top:-4px;font:700 10px/1 var(--f-script);font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);background:var(--paper);border-radius:4px 4px 0 0;padding:6px 8px;transform-origin:bottom;transform:rotateX(78deg);box-shadow:0 -1px 0 color-mix(in srgb,var(--ink) 15%,transparent);width:max-content;min-width:44%}
-.dr-in i:nth-child(2){margin-left:18%;background:var(--c)}
-.dr-in i:nth-child(3){margin-left:36%}
-.dr-in i:nth-child(4){margin-left:8%;background:color-mix(in srgb,var(--c) 50%,var(--paper))}
-.dr-in,.dr-l,.dr-r{pointer-events:none}
-.dr-l,.dr-r{position:absolute;top:0;width:var(--d);height:44px;background:color-mix(in srgb,var(--manila) 85%,#000 10%);transform-origin:left top}
-.dr-l{left:8px;transform:rotateY(90deg)}
-.dr-r{right:8px;transform-origin:right top;transform:rotateY(-90deg)}
-.cab-base{height:14px;margin:0 -18px;background:color-mix(in srgb,var(--manila-2) 70%,#000 12%);border-radius:0 0 4px 4px}
-.dr:focus-visible{outline:none}.dr:focus-visible .dr-front{outline:2px solid var(--blue);outline-offset:3px}
-.tray{min-width:0}.tray .panel{background:none;padding:0;border-radius:0}
-.tray-note{margin:0 0 16px;color:var(--ink-2);max-width:56ch}
-.cards{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.fc{background:var(--paper);box-shadow:var(--shadow);border-radius:3px;padding:16px 18px 16px 22px;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:16px;row-gap:4px;align-items:center;position:relative;background-image:linear-gradient(var(--paper) 34px,transparent 34px),repeating-linear-gradient(transparent 0 23px,color-mix(in srgb,var(--blue) 14%,transparent) 23px 24px)}
-.fc::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red);opacity:.55}
-.fc-k{grid-column:1;font:700 11px/1 var(--f-script);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
-.fc h3{grid-column:1;font:600 19px/1.25 var(--f-display)}
-.fc p{grid-column:1;margin:0;font:400 13px/1.5 var(--f-script);color:var(--ink-2)}
-.fc .go{grid-column:2;grid-row:1/4}
-@media (prefers-reduced-motion:no-preference){
-  .panel:not([hidden]) .fc{animation:pull .6s cubic-bezier(.2,1.2,.3,1) both;animation-delay:calc(var(--k,0)*90ms + .25s)}
-  @keyframes pull{from{opacity:0;transform:translateX(-40px) rotate(-3deg)}to{opacity:1;transform:none}}
+/* Card-catalog cabinet: sketched drawer fronts in a grid. Opening one pulls it out as a 3D box,
+   pages rise out of it, and its contents list slides in beside it. */
+.stage{position:relative;min-height:0;transition:min-height .4s}
+.stage.open{min-height:540px}
+.ccab{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));transition:opacity .45s,filter .45s}
+.stage.open .ccab{opacity:.1;filter:blur(1px);pointer-events:none}
+.cdrawer,.box-front{position:relative;aspect-ratio:2/1;background:var(--paper);display:grid;justify-items:center;align-content:start;padding-top:9%;gap:8%;color:var(--ink)}
+.cdrawer{border:0;cursor:pointer;font:inherit;transition:transform .35s cubic-bezier(.2,1.3,.4,1),box-shadow .35s;z-index:0}
+.cdrawer::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:0;background:var(--c);clip-path:polygon(0 100%,100% 100%,92% 0,8% 0);transition:height .35s cubic-bezier(.2,1.3,.4,1);opacity:.85}
+.cdrawer:hover,.cdrawer:focus-visible{transform:translateY(4px);z-index:2;box-shadow:0 10px 20px -12px rgba(40,30,10,.45)}
+.cdrawer:hover::before,.cdrawer:focus-visible::before{height:10px}
+.cdrawer:focus-visible{outline:2px solid var(--blue);outline-offset:-4px}
+.sk{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.sk rect,.box-back g{stroke:color-mix(in srgb,var(--ink) 45%,transparent);stroke-width:1.4}
+.chold{border:1.5px solid color-mix(in srgb,var(--ink) 40%,transparent);border-radius:999px;padding:3px 5px;background:var(--paper)}
+.chold>span{display:block;font:400 clamp(14px,1.7vw,19px)/1 var(--f-hand);padding:4px clamp(10px,2vw,22px);background:color-mix(in srgb,var(--c) 55%,var(--paper));border:1px solid color-mix(in srgb,var(--ink) 20%,transparent);border-radius:2px;white-space:nowrap}
+.keyhole{width:9px;height:14px;fill:color-mix(in srgb,var(--c) 70%,var(--paper));stroke:color-mix(in srgb,var(--ink) 50%,transparent);stroke-width:.8}
+.knob{width:clamp(22px,3vw,32px);aspect-ratio:1;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--ink) 50%,transparent);margin-top:4%}
+/* pulled-out drawer */
+.pulled{position:absolute;left:1%;top:50%;width:min(44%,440px);aspect-ratio:4/3;translate:0 -50%;display:none;transform-origin:0 33.333%}
+.stage.open .pulled{display:block}
+.box-back{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .3s .35s;overflow:visible}
+.stage.open .box-back{opacity:1}
+.box-back .inside{fill:color-mix(in srgb,var(--c) 75%,var(--ink) 8%)}
+.box-back .wall{fill:color-mix(in srgb,var(--paper) 88%,var(--ink) 6%)}
+.box-front{position:absolute;left:0;bottom:0;width:90%;height:66.667%;aspect-ratio:auto;padding-top:7%;box-shadow:0 18px 30px -18px rgba(40,30,10,.5)}
+.papers{position:absolute;left:5%;width:78%;top:0;height:100%}
+.paper{position:absolute;left:var(--x);width:72%;height:52%;top:6%;background:var(--paper);border:1px solid color-mix(in srgb,var(--ink) 18%,transparent);border-radius:3px;padding:10px 12px;font:700 11px/1.35 var(--f-script);letter-spacing:.04em;color:var(--ink);box-shadow:0 2px 6px rgba(40,30,10,.12);transform:translateY(110%) rotate(0);transition:transform .55s cubic-bezier(.2,1.25,.35,1);transition-delay:calc(var(--i)*90ms);background-image:repeating-linear-gradient(transparent 0 15px,color-mix(in srgb,var(--blue) 15%,transparent) 15px 16px);background-position:0 30px}
+.paper:nth-child(2){background-color:color-mix(in srgb,var(--c) 45%,var(--paper))}
+.stage.papers-up .paper{transform:translateY(var(--up)) rotate(var(--r))}
+/* contents list */
+.contents{position:absolute;right:0;top:0;width:52%;height:540px;border:1.5px dashed color-mix(in srgb,var(--ink) 30%,transparent);border-radius:6px;background:var(--paper);display:flex;flex-direction:column;opacity:0;translate:24px 0;transition:opacity .4s .2s,translate .5s .2s cubic-bezier(.2,1,.3,1)}
+.stage.open .contents{opacity:1;translate:0 0}
+.contents-scroll{overflow-y:auto;padding:22px 24px 90px;flex:1}
+.cdrawer-panel h3{font:700 24px/1.1 var(--f-display);display:flex;align-items:baseline;gap:10px;outline:none}
+.cdrawer-panel h3 small{font:400 12px/1 var(--f-script);color:var(--ink-2)}
+.cdrawer-panel .tray-note{margin:8px 0 14px;font-size:15px;color:var(--ink-2)}
+.entries{list-style:none;margin:0;padding:0}
+.entry{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;padding:14px 4px;border-top:1px solid var(--rule)}
+.badge{width:28px;height:28px;border-radius:50%;border:1px solid var(--ink);display:grid;place-items:center;font:700 9px/1 var(--f-script)}
+.e-top{display:flex;justify-content:space-between;gap:10px;font:600 14px/1.2 var(--f-body)}
+.e-top time{font:400 12px/1.2 var(--f-script);color:var(--ink-2)}
+.entry h4{margin:4px 0 2px;font:600 17px/1.25 var(--f-display)}
+.e-meta{font:400 12px/1.3 var(--f-script);color:var(--ink-2)}
+.putback{position:absolute;left:50%;bottom:18px;translate:-50% 0;background:color-mix(in srgb,var(--ink) 12%,var(--paper));color:var(--ink);border-color:transparent;box-shadow:var(--shadow)}
+@media (prefers-reduced-motion:reduce){.cdrawer,.cdrawer::before,.paper,.contents,.box-back,.ccab{transition:none}}
+@media (max-width:760px){
+  .ccab{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stage.open{min-height:0}
+  .stage.open .ccab{display:none}
+  .pulled{position:relative;left:auto;top:auto;translate:none;width:min(88%,360px);margin:10px auto 18px}
+  .contents{position:relative;width:100%;height:auto;max-height:none}
+  .contents-scroll{padding-bottom:84px}
 }
-@media (prefers-reduced-motion:reduce){.dr{transition:none}}
-@media (max-width:900px){.files{grid-template-columns:1fr}.cab-wrap{max-width:440px;width:100%;margin:0 auto}}
-@media (max-width:400px){.dr{height:80px}.dr[aria-selected="true"]{transform:translateZ(80px) translateY(6px)}.dr-label{font-size:18px}}
 </style>
 <script>
 (function(){
   /* Tabs (keyboard: arrows, Home, End) */
-  const tabs=[...document.querySelectorAll('[role=tab]')];
+  const tabs=[...document.querySelectorAll('[role=tab]')];if(!tabs.length){}
   function select(t){tabs.forEach(b=>{const on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on});t.focus({preventScroll:true});try{localStorage.setItem('tab',t.id)}catch(e){}}
   tabs.forEach((t,i)=>{t.addEventListener('click',()=>select(t));t.addEventListener('keydown',e=>{let j=null;if(e.key==='ArrowRight'||e.key==='ArrowDown')j=(i+1)%tabs.length;if(e.key==='ArrowLeft'||e.key==='ArrowUp')j=(i-1+tabs.length)%tabs.length;if(e.key==='Home')j=0;if(e.key==='End')j=tabs.length-1;if(j!==null){e.preventDefault();select(tabs[j])}})});
   try{const s=localStorage.getItem('tab');const t=s&&document.getElementById(s);if(t){tabs.forEach(b=>{const on=b===t;b.setAttribute('aria-selected',on);b.tabIndex=on?0:-1;document.getElementById(b.getAttribute('aria-controls')).hidden=!on})}}catch(e){}
 
-  document.querySelectorAll('.cards').forEach(u=>[...u.children].forEach((li,k)=>li.style.setProperty('--k',k)));
-  /* Copy email */
+    /* Copy email */
   const btn=document.getElementById('copy'),out=document.getElementById('copied'),em=document.getElementById('email');
   btn.addEventListener('click',()=>{const txt=em.textContent.trim();const done=()=>{out.textContent='copied!'};
     if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,()=>{sel();})}else sel();
@@ -610,8 +677,45 @@ footer{position:relative}
     const t=setInterval(()=>{f++;const keep=Math.floor(fin.length*f/total);leaf.textContent=fin.slice(0,keep)+[...fin.slice(keep)].map(c=>c===' '?' ':glyphs[Math.random()*glyphs.length|0]).join('');
       if(f>=total){clearInterval(t);leaf.textContent=fin;leaf.classList.remove('scr')}},35)})}
   document.querySelectorAll('[role=tab]').forEach(t=>t.addEventListener('click',()=>scramble(document.getElementById(t.getAttribute('aria-controls')))));
-  const folder=document.querySelector('.files');
-  const fo=new IntersectionObserver(es=>{if(es[0].isIntersecting){scramble(document.querySelector('.panel:not([hidden])'));fo.disconnect()}},{threshold:.3});fo.observe(folder);
+  const folder=document.querySelector('.files');if(folder){} else {}
+  const fo=new IntersectionObserver(es=>{if(es[0].isIntersecting){scramble(document.querySelector('.panel:not([hidden])'));fo.disconnect()}},{threshold:.3});if(folder)fo.observe(folder);
+})();
+</script>
+<script>
+/* Filing cabinet: open a drawer, pages rise, contents slide in; "Put it back" or Esc closes. */
+(function(){
+  const stage=document.getElementById('stage');if(!stage)return;
+  const pulled=stage.querySelector('.pulled'),front=pulled.querySelector('.box-front'),papers=pulled.querySelector('.papers'),
+        label=pulled.querySelector('.pulled-label'),contents=stage.querySelector('.contents'),putback=stage.querySelector('.putback');
+  const reduce=()=>matchMedia('(prefers-reduced-motion: reduce)').matches, wide=()=>matchMedia('(min-width: 761px)').matches;
+  let current=null,busy=false;
+  const ease='transform .6s cubic-bezier(.2,.9,.25,1)';
+  function flipFrom(btn){const a=btn.getBoundingClientRect(),f=front.getBoundingClientRect();
+    return `translate(${a.left-f.left}px,${a.top-f.top}px) scale(${a.width/f.width},${a.height/f.height})`}
+  function open(btn){if(busy||current)return;current=btn;
+    const panel=document.getElementById(btn.getAttribute('aria-controls'));
+    pulled.style.setProperty('--c',btn.style.getPropertyValue('--c'));stage.style.setProperty('--c',btn.style.getPropertyValue('--c'));
+    label.textContent=btn.querySelector('.chold span').textContent;
+    papers.textContent='';
+    [...panel.querySelectorAll('h4')].slice(0,4).forEach((h,i)=>{const p=document.createElement('div');p.className='paper';p.textContent=h.textContent;
+      p.style.setProperty('--i',i);p.style.setProperty('--x',(4+i*7)+'%');p.style.setProperty('--up',(-16+i*15)+'%');p.style.setProperty('--r',((i%2?1:-1)*(2+i))+'deg');papers.appendChild(p)});
+    contents.querySelectorAll('.cdrawer-panel').forEach(d=>d.hidden=d!==panel);
+    stage.classList.add('open');contents.hidden=false;btn.setAttribute('aria-expanded','true');
+    if(!reduce()&&wide()){pulled.style.transition='none';pulled.style.transform=flipFrom(btn);pulled.offsetWidth;pulled.style.transition=ease;pulled.style.transform=''}
+    setTimeout(()=>stage.classList.add('papers-up'),reduce()?0:380);
+    panel.querySelector('h3').focus({preventScroll:!wide()?false:true});
+    if(!wide())stage.scrollIntoView({block:'start'});
+  }
+  function close(){if(!current||busy)return;busy=true;const btn=current;
+    stage.classList.remove('papers-up');
+    const finish=()=>{stage.classList.remove('open');contents.hidden=true;pulled.style.transition='none';pulled.style.transform='';
+      btn.setAttribute('aria-expanded','false');current=null;busy=false;btn.focus({preventScroll:true})};
+    if(reduce()||!wide()){finish();return}
+    setTimeout(()=>{pulled.style.transition=ease;pulled.style.transform=flipFrom(btn);setTimeout(finish,560)},320);
+  }
+  stage.querySelectorAll('.cdrawer').forEach(b=>b.addEventListener('click',()=>open(b)));
+  putback.addEventListener('click',close);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&current)close()});
 })();
 </script>
 <script src="paper3d.js" defer></script>
