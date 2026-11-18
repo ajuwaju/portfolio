@@ -69,13 +69,27 @@ h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0;letter-spacing:
 .top nav a:hover{background:var(--paper);color:var(--ink);box-shadow:var(--shadow)}
 .note-ph{font:400 15px/1.3 var(--f-hand);background:var(--hl);color:var(--hl-ink);padding:8px 12px;transform:rotate(-1.5deg);box-shadow:var(--shadow);max-width:280px}
 
-.wip{display:flex;flex-direction:column;gap:3px;background:var(--paper);box-shadow:var(--shadow);padding:9px 14px 10px;transform:rotate(1.5deg);position:relative;border-left:4px solid var(--red)}.wip::before{content:"";position:absolute;top:-9px;left:50%;width:56px;height:18px;margin-left:-28px;background:color-mix(in srgb,var(--hl) 70%,transparent);transform:rotate(-4deg)}.wip b{font:700 11px/1 var(--f-script);letter-spacing:.16em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:7px}.wip b::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red);animation:blink 1.6s ease-in-out infinite}.wip span{font:400 16px/1.1 var(--f-hand);color:var(--ink-2)}@keyframes blink{50%{opacity:.25}}@media (prefers-reduced-motion:reduce){.wip b::before{animation:none}}@media (max-width:640px){.top nav{display:none}.wip{padding:7px 10px}.wip span{display:none}}
+.wip{display:flex;flex-direction:column;gap:3px;background:var(--paper);box-shadow:var(--shadow);padding:9px 14px 10px;transform:rotate(1.5deg);position:relative;border-left:4px solid var(--red)}.wip::before{content:"";position:absolute;top:-9px;left:50%;width:56px;height:18px;margin-left:-28px;background:color-mix(in srgb,var(--hl) 70%,transparent);transform:rotate(-4deg)}.wip b{font:700 11px/1 var(--f-script);letter-spacing:.16em;text-transform:uppercase;color:var(--red);display:flex;align-items:center;gap:7px}.wip b::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--red)}.wip span{font:400 16px/1.1 var(--f-hand);color:var(--ink-2)}@keyframes blink{50%{opacity:.25}}@media (prefers-reduced-motion:reduce){.wip b::before{animation:none}}@media (max-width:640px){.top nav{display:none}.wip{padding:7px 10px}.wip span{display:none}}
+
+/* Polish pass: browser surfaces, text on coloured paper, tap targets */
+:root{--on-color:#1F1E1B}
+::selection{background:var(--hl);color:var(--hl-ink)}
+html{scrollbar-color:var(--manila-2) var(--desk-2);accent-color:var(--red);caret-color:var(--red)}
+a{text-underline-offset:.2em;text-decoration-thickness:1px}
+body :is(.pill,.tabcard,.tag,.chip,.holder span,.chold>span,.stamp-in,.stamp-in blockquote,.stamp-in cite,.stamp-in .val){color:var(--on-color)}
+.stamp-in .val{opacity:.85}
+.ico{width:.8em;height:.8em;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.02em}
+.top nav a{padding:14px 14px}
+.go{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 14px}
+.links a{min-height:44px;align-items:center}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--pink:#D9AABA;--sage:#AEC3A4;--manila:#CDBA8C;--manila-2:#B5A06F;--hl:#DCC55E;--hl-ink:#1A1600;--blue:#86A2EA;--blue-ink:#0E1426;--clay:#C98468}}
+:root[data-theme="dark"]{--pink:#D9AABA;--sage:#AEC3A4;--manila:#CDBA8C;--manila-2:#B5A06F;--hl:#DCC55E;--hl-ink:#1A1600;--blue:#86A2EA;--blue-ink:#0E1426;--clay:#C98468}
 /* hero */
 .hero{position:relative;height:clamp(620px,92vh,860px);overflow:hidden}
 .hero-copy{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);text-align:center;width:min(640px,92%);z-index:3}
 .hero h1{font:700 clamp(44px,8vw,92px)/.95 var(--f-display);letter-spacing:-.035em}
 .hero h1 .dot{color:var(--red)}
-.hero p{margin:18px auto 0;max-width:30ch;font-size:clamp(17px,2.2vw,21px);color:var(--ink-2)}
+.hero p{margin:18px auto 0;max-width:34ch;text-wrap:pretty;font-size:clamp(17px,2.2vw,21px);color:var(--ink-2)}
 .hero p strong{color:var(--ink);font-weight:600}
 .hero .cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:24px}
 .btn{font:600 15px/1 var(--f-body);text-decoration:none;padding:13px 18px;border-radius:999px;border:1.5px solid var(--ink);background:var(--ink);color:var(--desk);display:inline-flex;gap:8px;align-items:center;cursor:pointer}
@@ -199,7 +213,7 @@ td.num{font:400 14px/1 var(--f-script);font-variant-numeric:tabular-nums;white-s
 .addr{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .addr code{font:700 16px/1 var(--f-script);background:var(--desk);border:1px dashed var(--ink-2);padding:13px 14px;border-radius:4px;user-select:all;overflow-wrap:anywhere}
 .env-r{padding:clamp(24px,4vw,48px);border-left:1px dashed var(--rule);display:grid;align-content:space-between;gap:24px;position:relative}
-.postmark{position:absolute;top:24px;right:24px;width:96px;height:96px;border-radius:50%;border:2px solid var(--ink-2);display:grid;place-items:center;text-align:center;font:700 10px/1.3 var(--f-script);color:var(--ink-2);letter-spacing:.1em;transform:rotate(12deg);opacity:.75}
+.postmark{opacity:1!important;position:absolute;top:24px;right:24px;width:96px;height:96px;border-radius:50%;border:2px solid var(--ink-2);display:grid;place-items:center;text-align:center;font:700 10px/1.3 var(--f-script);color:var(--ink-2);letter-spacing:.1em;transform:rotate(12deg);opacity:.75}
 .links{list-style:none;margin:0;padding:0;display:grid;gap:4px;margin-top:110px}
 .links a{display:flex;justify-content:space-between;gap:12px;text-decoration:none;font:600 18px/1 var(--f-display);padding:14px 0;border-bottom:1px solid var(--rule)}
 .links a span:last-child{font:400 13px/1 var(--f-script);color:var(--ink-2)}
@@ -261,7 +275,7 @@ footer{padding-top:56px;overflow:hidden}
     <!-- Scraps from a writer's desk. Real text, so screen readers and search engines can read them. -->
     <div class="bit idx" style="--x:15%;--y:22%;--r:-6deg;--mx:30%;--my:11%"><b>HEADLINE, TAKE 3</b>Why your best customers never read your About page</div>
     <div class="bit ticket" style="--x:44%;--y:9%;--r:4deg;--mx:78%;--my:6%"><small>DEADLINE</small>FRI 5:00 PM</div>
-    <div class="bit sticky opt" style="--x:83%;--y:18%;--r:5deg">intro too long? cut to the point!</div>
+    <div class="bit sticky opt" style="--x:83%;--y:18%;--r:5deg">intro too long? cut to the point.</div>
     <div class="bit stamp" style="--x:66%;--y:12%;--r:-14deg;--mx:80%;--my:19%">Fact<br>checked</div>
     <div class="bit pill" style="--x:9%;--y:52%;--r:-3deg;--mx:24%;--my:80%">1,200 words</div>
     <div class="bit receipt opt" style="--x:88%;--y:52%;--r:3deg">
@@ -280,15 +294,14 @@ footer{padding-top:56px;overflow:hidden}
 
     <div id="paper3d" aria-hidden="true"></div>
     <div class="hero-copy wrap">
-      <div class="eyebrow" style="margin:0 0 16px">Content writer</div>
-      <h1 id="hero-title">Got a story<span class="dot">?</span></h1>
-      <p>I write <strong>words people read to the end</strong>: articles, web copy, social posts and video scripts.</p>
+            <h1 id="hero-title">Got a story<span class="dot">?</span></h1>
+      <p>I'm Allanah, a content writer. I write <strong>articles, web copy, social posts and video scripts</strong> that people read to the end.</p>
       <div class="cta">
         <a class="btn" href="#work">See my work</a>
         <a class="btn ghost" href="#contact">Work with me</a>
       </div>
     </div>
-    <div class="scroll-hint" aria-hidden="true">scroll, the desk tidies itself ↓</div>
+    <div class="scroll-hint" aria-hidden="true">scroll, the desk tidies itself</div>
   </section>
 
   <section class="block" id="about" aria-labelledby="about-title">
@@ -296,8 +309,7 @@ footer{padding-top:56px;overflow:hidden}
       <article class="about-card">
         <span class="staple" style="left:24px" aria-hidden="true"></span>
         <span class="staple" style="right:24px" aria-hidden="true"></span>
-        <p class="eyebrow">About</p>
-        <h2 id="about-title">Hi, I'm Allanah. I write things people actually read.</h2>
+        <h2 id="about-title">Hi, I'm Allanah. I write things people read.</h2>
         <p><span class="ph">Two or three sentences about you: how you got into writing, the topics you love, and what makes your writing different.</span></p>
         <p>I write articles, blog posts, website copy, social content and video scripts. Whatever the format, the job is the same: find the angle, get the facts right, and hand over copy that's ready to publish.</p>
         <p><span class="ph">One line on what you're looking for next (new clients, a staff role, freelance projects).</span></p>
@@ -306,7 +318,7 @@ footer{padding-top:56px;overflow:hidden}
         <div class="fact"><span class="k">I write</span><span class="v">Articles · Blogs · Web copy · Social · Scripts</span></div>
         <div class="fact"><span class="k">Written for</span><span class="v"><span class="ph">Client or brand names</span></span></div>
         <div class="fact"><span class="k">Based in</span><span class="v"><span class="ph">City, Country</span></span></div>
-        <div class="fact hand"><span class="k">Currently</span><span class="v"><span class="ph">open to new projects!</span></span></div>
+        <div class="fact hand"><span class="k">Currently</span><span class="v"><span class="ph">open to new projects</span></span></div>
       </aside>
     </div>
   </section>
@@ -314,7 +326,6 @@ footer{padding-top:56px;overflow:hidden}
   <section class="block" id="work" aria-labelledby="work-title" style="padding-top:0">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Selected work</p>
         <h2 id="work-title">The filing cabinet</h2>
         <p>Every drawer holds one kind of writing. Open one to see what's inside.</p>
       </div>
@@ -343,7 +354,7 @@ footer{padding-top:56px;overflow:hidden}
               <span class="knob" aria-hidden="true"></span>
               <span class="sr">, 2 pieces</span>
             </button>
-<button class="cdrawer" type="button" aria-expanded="false" aria-controls="p-soc" style="--c:color-mix(in srgb,var(--blue) 30%,var(--paper))">
+<button class="cdrawer" type="button" aria-expanded="false" aria-controls="p-soc" style="--c:color-mix(in srgb,var(--blue) 40%,#fff)">
               <svg class="sk" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true"><rect x="1" y="1" width="98" height="48" fill="none" vector-effect="non-scaling-stroke" filter="url(#sketch)"/></svg>
               <span class="chold"><span>Social</span></span>
               <svg class="keyhole" viewBox="0 0 10 16" aria-hidden="true"><circle cx="5" cy="5" r="3.6"/><path d="M3.4 7.5 2.6 14h4.8L6.6 7.5"/></svg>
@@ -357,7 +368,7 @@ footer{padding-top:56px;overflow:hidden}
               <span class="knob" aria-hidden="true"></span>
               <span class="sr">, 2 pieces</span>
             </button>
-<button class="cdrawer" type="button" aria-expanded="false" aria-controls="p-mail" style="--c:color-mix(in srgb,var(--clay) 40%,var(--paper))">
+<button class="cdrawer" type="button" aria-expanded="false" aria-controls="p-mail" style="--c:color-mix(in srgb,var(--clay) 50%,#fff)">
               <svg class="sk" viewBox="0 0 100 50" preserveAspectRatio="none" aria-hidden="true"><rect x="1" y="1" width="98" height="48" fill="none" vector-effect="non-scaling-stroke" filter="url(#sketch)"/></svg>
               <span class="chold"><span>Newsletters</span></span>
               <svg class="keyhole" viewBox="0 0 10 16" aria-hidden="true"><circle cx="5" cy="5" r="3.6"/><path d="M3.4 7.5 2.6 14h4.8L6.6 7.5"/></svg>
@@ -381,48 +392,48 @@ footer{padding-top:56px;overflow:hidden}
               <h3 tabindex="-1">Articles<small>3 pieces</small></h3>
               <p class="tray-note">Researched articles, written to be read start to finish and found on Google.</p>
               <ul class="entries">
-                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Article title</span></h4><span class="e-meta"><span class="ph">1,500 words</span></span></div><a class="go" href="#">Read ↗</a></li>
-                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Article title</span></h4><span class="e-meta"><span class="ph">2,000 words</span></span></div><a class="go" href="#">Read ↗</a></li>
-                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Article title</span></h4><span class="e-meta"><span class="ph">1,200 words</span></span></div><a class="go" href="#">Read ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Article title</span></h4><span class="e-meta"><span class="ph">1,500 words</span></span></div><a class="go" href="#">Read <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Article title</span></h4><span class="e-meta"><span class="ph">2,000 words</span></span></div><a class="go" href="#">Read <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Article title</span></h4><span class="e-meta"><span class="ph">1,200 words</span></span></div><a class="go" href="#">Read <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
               </ul>
             </div>
 <div class="cdrawer-panel" id="p-blog" hidden>
               <h3 tabindex="-1">Blog posts<small>2 pieces</small></h3>
               <p class="tray-note">Blog posts that answer a real question in a voice people remember.</p>
               <ul class="entries">
-                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Blog post title</span></h4><span class="e-meta"><span class="ph">900 words</span></span></div><a class="go" href="#">Read ↗</a></li>
-                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Blog post title</span></h4><span class="e-meta"><span class="ph">1,100 words</span></span></div><a class="go" href="#">Read ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Blog post title</span></h4><span class="e-meta"><span class="ph">900 words</span></span></div><a class="go" href="#">Read <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Blog post title</span></h4><span class="e-meta"><span class="ph">1,100 words</span></span></div><a class="go" href="#">Read <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
               </ul>
             </div>
 <div class="cdrawer-panel" id="p-web" hidden>
               <h3 tabindex="-1">Web copy<small>2 pieces</small></h3>
               <p class="tray-note">Home, About and landing pages that explain what you do in plain words.</p>
               <ul class="entries">
-                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Landing page name</span></h4><span class="e-meta"><span class="ph">Landing page</span></span></div><a class="go" href="#">View ↗</a></li>
-                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">About page</span></h4><span class="e-meta"><span class="ph">Website</span></span></div><a class="go" href="#">View ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Landing page name</span></h4><span class="e-meta"><span class="ph">Landing page</span></span></div><a class="go" href="#">View <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">About page</span></h4><span class="e-meta"><span class="ph">Website</span></span></div><a class="go" href="#">View <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
               </ul>
             </div>
 <div class="cdrawer-panel" id="p-soc" hidden>
               <h3 tabindex="-1">Social<small>2 pieces</small></h3>
               <p class="tray-note">Captions, threads and post series that sound like the brand.</p>
               <ul class="entries">
-                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Campaign or series name</span></h4><span class="e-meta"><span class="ph">Instagram</span></span></div><a class="go" href="#">View ↗</a></li>
-                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Campaign or series name</span></h4><span class="e-meta"><span class="ph">LinkedIn</span></span></div><a class="go" href="#">View ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Campaign or series name</span></h4><span class="e-meta"><span class="ph">Instagram</span></span></div><a class="go" href="#">View <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Campaign or series name</span></h4><span class="e-meta"><span class="ph">LinkedIn</span></span></div><a class="go" href="#">View <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
               </ul>
             </div>
 <div class="cdrawer-panel" id="p-scr" hidden>
               <h3 tabindex="-1">Scripts<small>2 pieces</small></h3>
               <p class="tray-note">Long-form YouTube scripts: researched, written for voiceover, laid out for the editor.</p>
               <ul class="entries">
-                <li class="entry"><span class="badge" aria-hidden="true">CH</span><div class="e-body"><span class="e-top"><span class="ph">Channel</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Video title</span></h4><span class="e-meta"><span class="ph">Writer</span></span></div><a class="go" href="#">Watch ↗</a></li>
-                <li class="entry"><span class="badge" aria-hidden="true">CH</span><div class="e-body"><span class="e-top"><span class="ph">Channel</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Video title</span></h4><span class="e-meta"><span class="ph">Reviewer</span></span></div><a class="go" href="#">Watch ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CH</span><div class="e-body"><span class="e-top"><span class="ph">Channel</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Video title</span></h4><span class="e-meta"><span class="ph">Writer</span></span></div><a class="go" href="#">Watch <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CH</span><div class="e-body"><span class="e-top"><span class="ph">Channel</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Video title</span></h4><span class="e-meta"><span class="ph">Reviewer</span></span></div><a class="go" href="#">Watch <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
               </ul>
             </div>
 <div class="cdrawer-panel" id="p-mail" hidden>
               <h3 tabindex="-1">Newsletters<small>1 piece</small></h3>
               <p class="tray-note">Newsletters and email sequences people actually open.</p>
               <ul class="entries">
-                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Newsletter name</span></h4><span class="e-meta"><span class="ph">Email series</span></span></div><a class="go" href="#">Read ↗</a></li>
+                <li class="entry"><span class="badge" aria-hidden="true">CL</span><div class="e-body"><span class="e-top"><span class="ph">Client</span><time><span class="ph">Mon YYYY</span></time></span><h4><span class="ph">Newsletter name</span></h4><span class="e-meta"><span class="ph">Email series</span></span></div><a class="go" href="#">Read <svg class="ico" viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5 8.5 3.5M4.5 3.5h4v4"/></svg></a></li>
               </ul>
             </div>
           </div>
@@ -435,7 +446,6 @@ footer{padding-top:56px;overflow:hidden}
   <section class="block" id="services" aria-labelledby="services-title" style="padding-top:0">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">What I do</p>
         <h2 id="services-title">Every drawer is a skill</h2>
         <p>Hire me for a whole project, or just the part you need.</p>
       </div>
@@ -444,8 +454,8 @@ footer{padding-top:56px;overflow:hidden}
         <div class="drawer"><div class="holder"><span style="--c:var(--sage)">Website copy</span></div><div class="pull" aria-hidden="true"></div><p>Home, About and landing pages that explain what you do in plain words and lead to one clear next step.</p></div>
         <div class="drawer"><div class="holder"><span style="--c:var(--hl)">Social content</span></div><div class="pull" aria-hidden="true"></div><p>Captions, threads and post series written in your brand's voice, not a template's.</p></div>
         <div class="drawer"><div class="holder"><span style="--c:var(--manila)">Video scripts</span></div><div class="pull" aria-hidden="true"></div><p>Long-form YouTube scripts written for the ear, with a strong hook and notes the editor can follow.</p></div>
-        <div class="drawer"><div class="holder"><span style="--c:color-mix(in srgb,var(--blue) 30%,var(--paper))">Editing</span></div><div class="pull" aria-hidden="true"></div><p>Line edits, proofreading and structural feedback, given as exact changes rather than vague notes.</p></div>
-        <div class="drawer"><div class="holder"><span style="--c:color-mix(in srgb,var(--clay) 40%,var(--paper))">Research</span></div><div class="pull" aria-hidden="true"></div><p>Sources checked, facts verified and the latest updates found before anything is published.</p></div>
+        <div class="drawer"><div class="holder"><span style="--c:color-mix(in srgb,var(--blue) 40%,#fff)">Editing</span></div><div class="pull" aria-hidden="true"></div><p>Line edits, proofreading and structural feedback, given as exact changes rather than vague notes.</p></div>
+        <div class="drawer"><div class="holder"><span style="--c:color-mix(in srgb,var(--clay) 50%,#fff)">Research</span></div><div class="pull" aria-hidden="true"></div><p>Sources checked, facts verified and the latest updates found before anything is published.</p></div>
       </div>
     </div>
   </section>
@@ -453,7 +463,6 @@ footer{padding-top:56px;overflow:hidden}
   <section class="block" aria-labelledby="process-title" style="padding-top:0">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">How I work</p>
         <h2 id="process-title">From brief to published</h2>
       </div>
       <ol class="steps">
@@ -470,7 +479,6 @@ footer{padding-top:56px;overflow:hidden}
   <section class="block" aria-labelledby="kind-title" style="padding-top:0">
     <div class="wrap">
       <div class="sec-head">
-        <p class="eyebrow">Kind words</p>
         <h2 id="kind-title">Mail from people I've worked with</h2>
       </div>
       <div class="stamps">
@@ -485,7 +493,6 @@ footer{padding-top:56px;overflow:hidden}
     <div class="wrap">
       <div class="envelope">
         <div class="env-l">
-          <p class="eyebrow">Contact</p>
           <h2 id="contact-title">Tell me what you need written.</h2>
           <p>Send me a line about your project, who it's for and your deadline. I usually reply within <span class="ph">two days</span>.</p>
           <div class="addr">
@@ -528,7 +535,7 @@ footer{padding-top:56px;overflow:hidden}
 /* Motion, modeled on Feather's approach (CSS keyframes, no 3D): letters spread, scraps stamp down then drift,
    sections settle in as they scroll into view, table text unscrambles, a paper plane drifts across the footer. */
 .hero .bit{scale:var(--s,1)}
-.drawer .holder,.drawer .pull{transition:transform .35s cubic-bezier(.2,1.3,.4,1)}
+.drawer .holder,.drawer .pull{transition:transform .35s cubic-bezier(.16,1,.3,1)}
 .drawer:hover .holder{transform:translateY(-4px) rotate(-1.5deg)}
 .drawer:hover .pull{transform:translateY(3px)}
 footer{position:relative}
@@ -536,7 +543,7 @@ footer{position:relative}
 @media (prefers-reduced-motion:no-preference){
   .ltr{display:inline-block;animation:spread .95s cubic-bezier(.16,.9,.25,1) both;animation-delay:calc(var(--i)*28ms + .1s)}
   @keyframes spread{from{transform:translateX(var(--dx,0)) scale(.6);opacity:0;filter:blur(4px)}to{transform:none;opacity:1;filter:none}}
-  .hero .bit{animation:drop .65s cubic-bezier(.2,1.35,.4,1) both,drift 5.5s ease-in-out infinite alternate;animation-delay:calc(var(--d,0)*70ms + .35s),calc(var(--d,0)*-900ms)}
+  .hero .bit{animation:drop .65s cubic-bezier(.16,1,.3,1) both,drift 5.5s ease-in-out infinite alternate;animation-delay:calc(var(--d,0)*70ms + .35s),calc(var(--d,0)*-900ms)}
   .hero .bit.stamp{animation-name:thunk,drift;animation-duration:.5s,5.5s;animation-timing-function:cubic-bezier(.5,0,.75,0),ease-in-out;animation-delay:1.3s,0s}
   @keyframes drop{from{opacity:0;scale:calc(var(--s,1)*1.3)}to{opacity:1;scale:var(--s,1)}}
   @keyframes thunk{0%{opacity:0;scale:calc(var(--s,1)*2.4)}70%{opacity:1;scale:calc(var(--s,1)*.92)}100%{opacity:.95;scale:var(--s,1)}}
@@ -546,7 +553,7 @@ footer{position:relative}
   .in{transition:opacity .7s ease,translate .8s cubic-bezier(.2,1,.3,1),scale .45s cubic-bezier(.5,0,.75,0);transition-delay:var(--d,0s)}
   .plane{animation:fly 16s linear infinite}
   @keyframes fly{0%{transform:translate(-80px,40px) rotate(-8deg)}25%{transform:translate(25vw,-10px) rotate(4deg)}50%{transform:translate(50vw,30px) rotate(-6deg)}75%{transform:translate(75vw,-20px) rotate(5deg)}100%{transform:translate(calc(100vw + 80px),10px) rotate(-4deg)}}
-  .scr{color:var(--ink-2)}
+  
 }
 </style>
 <style>#paper3d{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);width:min(860px,100%);height:min(540px,72%);z-index:1;pointer-events:none}#paper3d canvas{display:block}@media (max-width:640px){#paper3d{top:50%;height:440px}}</style>
@@ -558,15 +565,15 @@ footer{position:relative}
 .ccab{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));transition:opacity .45s,filter .45s}
 .stage.open .ccab{opacity:.1;filter:blur(1px);pointer-events:none}
 .cdrawer,.box-front{position:relative;aspect-ratio:2/1;background:var(--paper);display:grid;justify-items:center;align-content:start;padding-top:9%;gap:8%;color:var(--ink)}
-.cdrawer{border:0;cursor:pointer;font:inherit;transition:transform .35s cubic-bezier(.2,1.3,.4,1),box-shadow .35s;z-index:0}
-.cdrawer::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:0;background:var(--c);clip-path:polygon(0 100%,100% 100%,92% 0,8% 0);transition:height .35s cubic-bezier(.2,1.3,.4,1);opacity:.85}
+.cdrawer{border:0;cursor:pointer;font:inherit;transition:transform .35s cubic-bezier(.16,1,.3,1),box-shadow .35s;z-index:0}
+.cdrawer::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:0;background:var(--c);clip-path:polygon(0 100%,100% 100%,92% 0,8% 0);transition:height .35s cubic-bezier(.16,1,.3,1);opacity:.85}
 .cdrawer:hover,.cdrawer:focus-visible{transform:translateY(4px);z-index:2;box-shadow:0 10px 20px -12px rgba(40,30,10,.45)}
 .cdrawer:hover::before,.cdrawer:focus-visible::before{height:10px}
 .cdrawer:focus-visible{outline:2px solid var(--blue);outline-offset:-4px}
 .sk{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .sk rect,.box-back g{stroke:color-mix(in srgb,var(--ink) 45%,transparent);stroke-width:1.4}
 .chold{border:1.5px solid color-mix(in srgb,var(--ink) 40%,transparent);border-radius:999px;padding:3px 5px;background:var(--paper)}
-.chold>span{display:block;font:400 clamp(14px,1.7vw,19px)/1 var(--f-hand);padding:4px clamp(10px,2vw,22px);background:color-mix(in srgb,var(--c) 55%,var(--paper));border:1px solid color-mix(in srgb,var(--ink) 20%,transparent);border-radius:2px;white-space:nowrap}
+.chold>span{display:block;font:400 clamp(14px,1.7vw,19px)/1 var(--f-hand);padding:4px clamp(10px,2vw,22px);background:color-mix(in srgb,var(--c) 85%,var(--paper));border:1px solid color-mix(in srgb,var(--ink) 20%,transparent);border-radius:2px;white-space:nowrap}
 .keyhole{width:9px;height:14px;fill:color-mix(in srgb,var(--c) 70%,var(--paper));stroke:color-mix(in srgb,var(--ink) 50%,transparent);stroke-width:.8}
 .knob{width:clamp(22px,3vw,32px);aspect-ratio:1;border-radius:50%;border:1.5px solid color-mix(in srgb,var(--ink) 50%,transparent);margin-top:4%}
 /* pulled-out drawer */
@@ -578,7 +585,7 @@ footer{position:relative}
 .box-back .wall{fill:color-mix(in srgb,var(--paper) 88%,var(--ink) 6%)}
 .box-front{position:absolute;left:0;bottom:0;width:90%;height:66.667%;aspect-ratio:auto;padding-top:7%;box-shadow:0 18px 30px -18px rgba(40,30,10,.5)}
 .papers{position:absolute;left:5%;width:78%;top:0;height:100%}
-.paper{position:absolute;left:var(--x);width:72%;height:52%;top:6%;background:var(--paper);border:1px solid color-mix(in srgb,var(--ink) 18%,transparent);border-radius:3px;padding:10px 12px;font:700 11px/1.35 var(--f-script);letter-spacing:.04em;color:var(--ink);box-shadow:0 2px 6px rgba(40,30,10,.12);transform:translateY(110%) rotate(0);transition:transform .55s cubic-bezier(.2,1.25,.35,1);transition-delay:calc(var(--i)*90ms);background-image:repeating-linear-gradient(transparent 0 15px,color-mix(in srgb,var(--blue) 15%,transparent) 15px 16px);background-position:0 30px}
+.paper{position:absolute;left:var(--x);width:72%;height:52%;top:6%;background:var(--paper);border:1px solid color-mix(in srgb,var(--ink) 18%,transparent);border-radius:3px;padding:10px 12px;font:700 11px/1.35 var(--f-script);letter-spacing:.04em;color:var(--ink);box-shadow:0 2px 6px rgba(40,30,10,.12);transform:translateY(110%) rotate(0);transition:transform .55s cubic-bezier(.16,1,.3,1);transition-delay:calc(var(--i)*90ms);background-image:repeating-linear-gradient(transparent 0 15px,color-mix(in srgb,var(--blue) 15%,transparent) 15px 16px);background-position:0 30px}
 .paper:nth-child(2){background-color:color-mix(in srgb,var(--c) 45%,var(--paper))}
 .stage.papers-up .paper{transform:translateY(var(--up)) rotate(var(--r))}
 /* contents list */
@@ -669,7 +676,7 @@ footer{position:relative}
   /* 3. Sections settle in when they scroll into view (only ones below the fold, so the first screen is complete) */
   const groups=[['.about-card,.fact',90],['.drawer',60],['.steps li',80],['.stampcard',160],['.envelope',0],['.sec-head',0],['.folder',0]];
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');e.target.classList.remove('pre');io.unobserve(e.target)}}),{rootMargin:'0px 0px -12% 0px'});
-  groups.forEach(([sel,step])=>document.querySelectorAll(sel).forEach((el,k)=>{if(el.getBoundingClientRect().top>innerHeight){el.style.setProperty('--d',(k%6)*step+'ms');el.classList.add('pre');io.observe(el)}}));
+  
   /* 4. Table text unscrambles, like a filing card being read */
   const glyphs='abcdefghijklmnopqrstuvwxyz0123456789';
   function scramble(panel){panel.querySelectorAll('.fc h3,.fc p').forEach((td,k)=>{const leaf=td.querySelector('.ph')||td;if(leaf.children.length)return;
