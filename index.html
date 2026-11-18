@@ -84,6 +84,10 @@ body :is(.pill,.tabcard,.tag,.chip,.holder span,.chold>span,.stamp-in,.stamp-in 
 .links a{min-height:44px;align-items:center}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--pink:#D9AABA;--sage:#AEC3A4;--manila:#CDBA8C;--manila-2:#B5A06F;--hl:#DCC55E;--hl-ink:#1A1600;--blue:#86A2EA;--blue-ink:#0E1426;--clay:#C98468}}
 :root[data-theme="dark"]{--pink:#D9AABA;--sage:#AEC3A4;--manila:#CDBA8C;--manila-2:#B5A06F;--hl:#DCC55E;--hl-ink:#1A1600;--blue:#86A2EA;--blue-ink:#0E1426;--clay:#C98468}
+/* Labels: one pill, fill and outline the same shape */
+body :is(.chold,.holder){border:0;padding:0;background:none;border-radius:0}
+body :is(.chold,.holder)>span{border:1.5px solid color-mix(in srgb,var(--on-color) 45%,transparent);border-radius:999px;padding:7px clamp(14px,2vw,22px);box-shadow:inset 0 -2px 0 color-mix(in srgb,var(--on-color) 10%,transparent)}
+body .chold>span{background:color-mix(in srgb,var(--c) 85%,#fff)}
 /* hero */
 .hero{position:relative;height:clamp(620px,92vh,860px);overflow:hidden}
 .hero-copy{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);text-align:center;width:min(640px,92%);z-index:3}
